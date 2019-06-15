@@ -93,6 +93,7 @@ namespace Leap.Unity
                     controlHand = controlHandModel.GetLeapHand();
                     if (usedHand != null && controlHand != null)
                     {
+
                         palmObjectDistance = Vector3.Distance(target.transform.position, controlHand.PalmPosition.ToVector3());
                         if (usedHandModel.IsTracked && controlHandModel.IsTracked && controlHand.GrabAngle >= 3)
                         {

@@ -306,8 +306,13 @@
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\IgnoreCollisionsInChildren.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\KabschSolver.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
+    <Compile Include="Assets\MaterialController.cs" />
     <Compile Include="Assets\Scripts\ClapDetector.cs" />
+    <Compile Include="Assets\Scripts\ColorControl.cs" />
+    <Compile Include="Assets\Scripts\CountTrigger.cs" />
+    <Compile Include="Assets\Scripts\CreatePlaneFromPoints.cs" />
     <Compile Include="Assets\Scripts\CrumpleMesh.cs" />
+    <Compile Include="Assets\Scripts\DrawWithFinger.cs" />
     <Compile Include="Assets\Scripts\ExtrudedMeshTrail.cs" />
     <Compile Include="Assets\Scripts\FingerRaycast.cs" />
     <Compile Include="Assets\Scripts\FractalTexture.cs" />
@@ -317,12 +322,17 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\KeywordScript.cs" />
     <Compile Include="Assets\Scripts\LightningBolt.cs" />
+    <Compile Include="Assets\Scripts\LineCollider.cs" />
+    <Compile Include="Assets\Scripts\MaterialChange.cs" />
+    <Compile Include="Assets\Scripts\MaterialEditor.cs" />
     <Compile Include="Assets\Scripts\PaintVertices.cs" />
+    <Compile Include="Assets\Scripts\PropControl.cs" />
     <Compile Include="Assets\Scripts\ResizeModel.cs" />
     <Compile Include="Assets\Scripts\RotateModel.cs" />
     <Compile Include="Assets\Scripts\RotateRigidbody.cs" />
     <Compile Include="Assets\Scripts\SinusCurveModifier.cs" />
     <Compile Include="Assets\Scripts\SmoothRandomPosition.cs" />
+    <Compile Include="Assets\Scripts\Triangulator.cs" />
     <Compile Include="Assets\Scripts\TronTrail.cs" />
     <Compile Include="Assets\Scripts\Twist.cs" />
     <Compile Include="Assets\Scripts\Utils\DragTransform.cs" />
@@ -331,6 +341,7 @@
     <Compile Include="Assets\Scripts\Utils\MeshExtrusion.cs" />
     <Compile Include="Assets\Scripts\Utils\Perlin.cs" />
     <Compile Include="Assets\Scripts\Utils\SmoothRandom.cs" />
+    <Compile Include="Assets\SwipeDetector.cs" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\LeapMotion\Core\Resources\LeapCG.cginc" />
@@ -357,6 +368,7 @@
     <None Include="Assets\LeapMotion\Core\Shaders\VertexOffsetShader.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Hologram.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">

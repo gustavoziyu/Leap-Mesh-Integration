@@ -428,6 +428,11 @@ Prefab:
       propertyPath: ModelPool.Array.data[1].CanDuplicate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114876243668111090, guid: e5874351f2a4f164d9a22fd358f9ccc8,
+        type: 2}
+      propertyPath: _leapProvider
+      value: 
+      objectReference: {fileID: 1713240327}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5874351f2a4f164d9a22fd358f9ccc8, type: 2}
   m_IsPrefabParent: 0
@@ -473,6 +478,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fb82f567bc866944af8f0555bded944, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1713240327 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114042045099716194, guid: 7fb82f567bc866944af8f0555bded944,
+    type: 2}
+  m_PrefabInternal: {fileID: 1713240326}
+  m_Script: {fileID: 11500000, guid: 025cc0fa7b46aa541aba29d28d35ac09, type: 3}
 --- !u!114 &2051116919 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114647010017861118, guid: e5874351f2a4f164d9a22fd358f9ccc8,

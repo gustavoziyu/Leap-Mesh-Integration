@@ -23,6 +23,10 @@ public class OculusTouchDebug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (OVRInput.Get(OVRInput.Button.One)) {
+            Debug.Log("RYU");
+        }
+
         //Button two (B) tracking
         if (OVRInput.Get(OVRInput.Button.Two)) buttonTwoStatus = 2;
         else if (OVRInput.Get(OVRInput.Touch.Two)) buttonTwoStatus = 1;
@@ -32,6 +36,7 @@ public class OculusTouchDebug : MonoBehaviour
         //Left index trigger tracking
         leftIndexTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
         leftIndexTriggerText.text = "Left index trigger position: " + leftIndexTrigger;
+        Debug.Log("Left index trigger position: " + leftIndexTrigger);
 
         //Left thumbstick tracking
         leftThumbstickPosition = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);

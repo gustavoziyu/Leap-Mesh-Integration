@@ -38,16 +38,16 @@ public class Triangulator : MonoBehaviour
         }
 
         // Create the mesh
-        Mesh msh = new Mesh();
-        msh.vertices = vertices;
-        msh.triangles = indices;
-        msh.RecalculateNormals();
-        msh.RecalculateBounds();
-
+        Mesh m = CreateMeshByPolygon.CreateMesh(vertices);
+        
         // Set up game object with mesh;
-        gameobject.AddComponent(typeof(MeshRenderer));
+        MeshRenderer renderer = gameobject.AddComponent(typeof(MeshRenderer)) as MeshRenderer;
+        GameObject primitive = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        Material diffuse = primitive.GetComponent<MeshRenderer>().sharedMaterial;
+        DestroyImmediate(primitive);
+        renderer.sharedMaterial = diffuse;
         MeshFilter filter = gameobject.AddComponent(typeof(MeshFilter)) as MeshFilter;
-        filter.mesh = msh;
+        filter.mesh = m;
         this.transform.position = center;
     }
 

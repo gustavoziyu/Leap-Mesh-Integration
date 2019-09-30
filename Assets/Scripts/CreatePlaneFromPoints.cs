@@ -202,6 +202,17 @@ namespace Leap.Unity
             {
                 createdPlan = Instantiate(plan, polyCenter, Quaternion.Euler(0.0f, 0.0f, 0.0f));
                 createdPlan.GetComponent<Triangulator>().createPolygon(markers, markers.Count);
+                createdPlan.tag = "Plane";
+                gameObject.GetComponent<CreateMeshByPolygonLeap>().Setup();
+                gameObject.GetComponent<RotateModel>().target = createdPlan;
+                foreach (GameObject marker in markers)
+                {
+                    marker.SetActive(false);
+                }
+                foreach (GameObject line in lines)
+                {
+                    line.SetActive(false);
+                }
             }
             else
             {

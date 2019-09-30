@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreateMeshByPolygon : MonoBehaviour {
-    private static float initialZ = 0.5f;
+    private static float initialZ = 0f;
 
     /* Checks if the given polygon is defined clockwise or anti-clockwise.
      * Returns true if is clockwise and false if anti-clockwise. */

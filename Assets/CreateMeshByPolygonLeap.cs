@@ -67,7 +67,7 @@ namespace Leap.Unity
             Deactivate();
         }
 
-        private void Setup()
+        public void Setup()
         {
             target = GameObject.FindWithTag("Plane");
 
@@ -105,8 +105,8 @@ namespace Leap.Unity
             new Vector3(5,3,0),
             };
 
-            Mesh m = CreateMeshByPolygon.CreateMesh(poly);
-            target.GetComponent<MeshFilter>().mesh = m;
+            //Mesh m = CreateMeshByPolygon.CreateMesh(poly);
+            //target.GetComponent<MeshFilter>().mesh = m;
         }
 
         private IEnumerator checkGesture()
@@ -116,11 +116,9 @@ namespace Leap.Unity
             Vector3 baseDistance = new Vector3(0, 0, 0);
             Vector3 currentDistance;
 
-            Setup();
-
             while (true)
             {
-                if (HandModelLeft != null && HandModelRight != null)
+                if (HandModelLeft != null && HandModelRight != null && target != null)
                 {
                     handLeft = HandModelLeft.GetLeapHand();
                     handRight = HandModelRight.GetLeapHand();

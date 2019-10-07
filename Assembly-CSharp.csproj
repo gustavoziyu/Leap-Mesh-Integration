@@ -608,6 +608,7 @@
     <Compile Include="Assets\Scripts\DrawWithFinger.cs" />
     <Compile Include="Assets\Scripts\ExtrudedMeshTrail.cs" />
     <Compile Include="Assets\Scripts\FingerRaycast.cs" />
+    <Compile Include="Assets\Scripts\FingerRaycastTouch.cs" />
     <Compile Include="Assets\Scripts\FractalTexture.cs" />
     <Compile Include="Assets\Scripts\GestureDetector.cs" />
     <Compile Include="Assets\Scripts\HeightmapGenerator.cs" />
@@ -693,18 +694,6 @@
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -714,11 +703,17 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
@@ -740,6 +735,12 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>

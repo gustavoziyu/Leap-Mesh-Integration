@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/OculusTouchDebug.unity
+- path: Assets/Scenes/Sculpt Leap Touch.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

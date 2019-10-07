@@ -745,6 +745,15 @@
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>C:/Users/Dell/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Formats.Fbx.Editor">
+ <HintPath>C:/Users/Dell/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Autodesk.Fbx">
+ <HintPath>C:/Users/Dell/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Formats.Fbx.Runtime">
+ <HintPath>C:/Users/Dell/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>

@@ -617,6 +617,7 @@
      <Compile Include="Assets\Scripts\PropControl.cs" />
      <Compile Include="Assets\Scripts\ResizeModel.cs" />
      <Compile Include="Assets\Scripts\RotateModel.cs" />
+     <Compile Include="Assets\Scripts\RotateModelTouch.cs" />
      <Compile Include="Assets\Scripts\RotateRigidbody.cs" />
      <Compile Include="Assets\Scripts\SinusCurveModifier.cs" />
      <Compile Include="Assets\Scripts\SmoothRandomPosition.cs" />

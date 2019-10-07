@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class OculusTouchDebug : MonoBehaviour
 {
-    public Text buttonTwoStatusText;
+    public Text buttonThreeStatusText;
+    public Text buttonFourStatusText;
     public Text leftIndexTriggerText;
+    public Text leftHandTriggerText;
     public Text leftThumbstickXAxisText;
     public Text leftThumbstickYAxisText;
 
-    private int buttonTwoStatus;
+    private int buttonThreeStatus;
+    private int buttonFourStatus;
     private float leftIndexTrigger;
+    private float leftHandTrigger;
     private Vector2 leftThumbstickPosition;
 
     // Start is called before the first frame update
@@ -23,20 +27,28 @@ public class OculusTouchDebug : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.One)) {
-            Debug.Log("RYU");
-        }
 
-        //Button two (B) tracking
-        if (OVRInput.Get(OVRInput.Button.Two)) buttonTwoStatus = 2;
-        else if (OVRInput.Get(OVRInput.Touch.Two)) buttonTwoStatus = 1;
-        else buttonTwoStatus = 0;
-        setButtonStatusMessage(buttonTwoStatusText, "Button Two (B): ", buttonTwoStatus);
+        //Button three (X) tracking
+        if (OVRInput.Get(OVRInput.Button.Three)) buttonThreeStatus = 2;
+        else if (OVRInput.Get(OVRInput.Touch.Three)) buttonThreeStatus = 1;
+        else buttonThreeStatus = 0;
+        setButtonStatusMessage(buttonThreeStatusText, "Button Three (B): ", buttonThreeStatus);
+        
+        //Button four (Y) tracking
+        if (OVRInput.Get(OVRInput.Button.Four)) buttonFourStatus = 2;
+        else if (OVRInput.Get(OVRInput.Touch.Four)) buttonFourStatus = 1;
+        else buttonFourStatus = 0;
+        setButtonStatusMessage(buttonFourStatusText, "Button Four (B): ", buttonFourStatus);
 
         //Left index trigger tracking
         leftIndexTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
         leftIndexTriggerText.text = "Left index trigger position: " + leftIndexTrigger;
         Debug.Log("Left index trigger position: " + leftIndexTrigger);
+       
+        //Left hand trigger tracking
+        leftHandTrigger = OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger);
+        leftHandTriggerText.text = "Left hand trigger position: " + leftHandTrigger;
+        Debug.Log("Left hand trigger position: " + leftHandTrigger);
 
         //Left thumbstick tracking
         leftThumbstickPosition = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);

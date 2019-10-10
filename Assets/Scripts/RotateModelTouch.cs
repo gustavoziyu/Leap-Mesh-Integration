@@ -95,14 +95,14 @@ namespace Leap.Unity
                     {
 
                         palmObjectDistance = Vector3.Distance(target.transform.position, usedHand.PalmPosition.ToVector3());
-                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > sensitivity)
+                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) <= sensitivity && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > sensitivity)
                         {
                             target.transform.rotation = Quaternion.Euler(target.transform.rotation.eulerAngles.x,
                                                                          target.transform.rotation.eulerAngles.y + rotationIntensity * (-1) * usedHand.PalmVelocity.x,
                                                                          target.transform.rotation.eulerAngles.z);
                             target.transform.RotateAround(target.transform.position, Vector3.right, rotationIntensity * usedHand.PalmVelocity.y);
                         }
-                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > sensitivity
+                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) <= sensitivity
                             && (palmObjectDistance < translateDistance || translating))
                         {
                             if (!translating) translating = true;

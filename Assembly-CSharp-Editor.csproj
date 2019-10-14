@@ -166,6 +166,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -193,6 +196,9 @@
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
@@ -208,20 +214,14 @@
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Formats.Fbx.Runtime">
+      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Formats.Fbx.Editor">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Fbx">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Formats.Fbx.Runtime">
-      <HintPath>C:/Users/Escultura/Documents/Leap-Mesh-Integration/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

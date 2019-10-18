@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/RotateObjectTouch.unity
+=======
+- path: Assets/LeapMotion/Modules/InteractionEngine/Examples/2. Basic UI/Basic UI.unity
+>>>>>>> 5ae295caa4f29d9258a85ab3dcf348c60858fd29
   isLoaded: 1
   isActive: 1
   isSubScene: 0

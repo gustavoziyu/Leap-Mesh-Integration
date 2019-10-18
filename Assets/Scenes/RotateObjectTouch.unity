@@ -989,7 +989,7 @@ MonoBehaviour:
   HandModelLeft: {fileID: 461779626}
   HandModelRight: {fileID: 610600822}
   target: {fileID: 699086168}
-  rotationIntensity: 1
+  rotationIntensity: 10
   translationIntensity: 0.05
   translateDistance: 0.3
   rotatingHand: 1

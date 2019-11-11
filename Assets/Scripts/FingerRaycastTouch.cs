@@ -144,6 +144,7 @@ namespace Leap.Unity
                                     // Deform mesh
                                     Vector3 relativePoint = filter.transform.InverseTransformPoint(hit.point);
                                     leftThumbstickPosition = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+                                    Debug.Log(leftThumbstickPosition);
                                     DeformMesh(filter.mesh, relativePoint, leftThumbstickPosition.y * pullStrength * Time.deltaTime, radius);
                                 }
                             }

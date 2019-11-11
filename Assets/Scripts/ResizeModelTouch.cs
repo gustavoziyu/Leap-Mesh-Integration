@@ -81,11 +81,15 @@ namespace Leap.Unity
                         //TODO Add OVR tracking
                         if (HandModelRight.IsTracked)
                         {
-                            if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > sensitivity && handRight.IsPinching())
+
+                            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > sensitivity && handRight.IsPinching())
                             {
-                                //TODO get OVR hand position
-                                //positionLeft = handLeft.GetPredictedPinchPosition();
+
+                                Debug.Log("1");
+                                positionLeft = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch);
+                                Debug.Log("LEFT: " + positionLeft);
                                 positionRight = handRight.GetPredictedPinchPosition();
+                                Debug.Log("RIGHT: " + positionRight);
                                 if (startResizing)
                                 {
                                     startResizing = false;

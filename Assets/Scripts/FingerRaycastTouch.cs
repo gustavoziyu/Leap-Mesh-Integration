@@ -37,8 +37,10 @@ namespace Leap.Unity
      */
     public class FingerRaycastTouch : Detector
     {
+        public float indicatorDistance = 0.5f;
+        public float sizeIndicator = 0.05f;
         public float radius = 1.0f;
-        private float pullStrength = 5.0f;
+        public float pullStrength = 5.0f;
         private MeshFilter unappliedMesh;
         public FallOff fallOff = FallOff.Gauss;
 
@@ -47,6 +49,7 @@ namespace Leap.Unity
         private Mesh savedMesh;
         private Vector3[] savedVertices;
         private Vector3[] savedNormals;
+        private GameObject indicator;
         private Vector2 leftThumbstickPosition;
 
         /**
@@ -81,6 +84,8 @@ namespace Leap.Unity
 
         private void Awake()
         {
+            indicator = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            indicator.transform.localScale = new Vector3(sizeIndicator, sizeIndicator, sizeIndicator);
             watcherCoroutine = showRaycast();
         }
 
@@ -119,6 +124,9 @@ namespace Leap.Unity
                             if (Physics.Raycast(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3(), out hit, Mathf.Infinity))
                             {
                                 Debug.DrawRay(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3() * hit.distance, Color.yellow);
+                                indicator.SetActive(true);
+                                Vector3 startEnd = hit.point - hand.Fingers[selectedFinger].TipPosition.ToVector3();
+                                indicator.transform.position = hit.point - startEnd * indicatorDistance;
                                 MeshFilter filter = hit.collider.GetComponent<MeshFilter>();
                                 if (filter)
                                 {
@@ -151,6 +159,7 @@ namespace Leap.Unity
                             else
                             {
                                 saveMesh = true;
+                                indicator.SetActive(false);
                             }
                         }
                     }

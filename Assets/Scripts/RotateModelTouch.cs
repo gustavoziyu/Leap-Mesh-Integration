@@ -46,13 +46,8 @@ namespace Leap.Unity
         public float rotationIntensity = 1;
 
         [Tooltip("Intensity of translation.")]
-        [Range(0.0f, 1.0f)]
-        public float translationIntensity = 0.05f;
-
-
-        [Tooltip("Minimum distance to translate from Palm to Object.")]
-        [Range(0.0f, 1.0f)]
-        public float translateDistance = 0.3f;
+        [Range(0.0f, 10.0f)]
+        public float translationIntensity = 2f;
 
         [Tooltip("The hand that makes the rotation.")]
         public WhichHand rotatingHand = WhichHand.Right;
@@ -103,14 +98,8 @@ namespace Leap.Unity
                                                                          target.transform.rotation.eulerAngles.z);
                             target.transform.RotateAround(target.transform.position, Vector3.right, rotationIntensity * usedHand.PalmVelocity.y);
                         }
-                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) <= sensitivity
-                            && (palmObjectDistance < translateDistance || translating))
+                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) <= sensitivity)
                         {
-                            if (!translating) translating = true;
-                            else
-                            {
-                                if (palmObjectDistance > translateDistance + 0.1f) translating = false;
-                            }
                             Debug.Log(Vector3.Distance(target.transform.position, usedHand.PalmPosition.ToVector3()));
                             target.transform.position = new Vector3(target.transform.position.x + translationIntensity * usedHand.PalmVelocity.x,
                                                                     target.transform.position.y + translationIntensity * usedHand.PalmVelocity.y,

@@ -73,6 +73,8 @@ namespace Leap.Unity
      
             while (true)
             {
+                //vibration function
+                //OVRInput.SetControllerVibration(0.001f, 1, OVRInput.Controller.LTouch);
                 if (HandModelRight != null)
                 {
                     handRight = HandModelRight.GetLeapHand();

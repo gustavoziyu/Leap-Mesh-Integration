@@ -85,18 +85,19 @@ namespace Leap.Unity
             Hand usedHand, controlHand;
             HandModelBase usedHandModel = (rotatingHand == WhichHand.Left) ? HandModelLeft : HandModelRight;
             HandModelBase controlHandModel = (rotatingHand == WhichHand.Left) ? HandModelRight : HandModelLeft;
+
             while (true)
             {
-                if (usedHandModel != null && controlHandModel != null)
+                if (usedHandModel != null && controlHandModel != null && target != null)
                 {
                     usedHand = usedHandModel.GetLeapHand();
                     controlHand = controlHandModel.GetLeapHand();
                     if (usedHand != null && controlHand != null)
                     {
-
                         palmObjectDistance = Vector3.Distance(target.transform.position, controlHand.PalmPosition.ToVector3());
                         if (usedHandModel.IsTracked && controlHandModel.IsTracked && controlHand.GrabAngle >= 3)
                         {
+                 
                             target.transform.rotation = Quaternion.Euler(target.transform.rotation.eulerAngles.x,
                                                                          target.transform.rotation.eulerAngles.y + rotationIntensity * (-1) * usedHand.PalmVelocity.x,
                                                                          target.transform.rotation.eulerAngles.z);
@@ -105,6 +106,7 @@ namespace Leap.Unity
                         if (controlHandModel.IsTracked && usedHandModel.IsTracked && usedHand.GrabAngle >= 3 
                             && (palmObjectDistance < translateDistance || translating))
                         {
+
                             if (!translating) translating = true;
                             else
                             {

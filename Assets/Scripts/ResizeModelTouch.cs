@@ -50,6 +50,7 @@ namespace Leap.Unity
 
         private void Awake()
         {
+            target = GameObject.FindWithTag("ModelObject");
             watcherCoroutine = checkGesture();
         }
 

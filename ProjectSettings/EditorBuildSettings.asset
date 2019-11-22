@@ -11,4 +11,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChangeMaterial.unity
     guid: 208678ff688dd8144b7b1feadd7e8a47
+  - enabled: 0
+    path: Assets/Scenes/Escolher objeto inicial.unity
+    guid: 64355a3af9038864cb6ab2fa88fc5e7e
+  - enabled: 1
+    path: Assets/Scenes/Display Imports.unity
+    guid: 3d9bbbc52bbba594ca9d3d20d1d70572
+  - enabled: 1
+    path: "Assets/Scenes/Objeto padr\xE3o.unity"
+    guid: f71b46ad0602c0b46bfbbe0bef719aa2
+  - enabled: 0
+    path: Assets/Scenes/First Integration Rotation+Scale.unity
+    guid: ec72cc01a04befa48b2f6073bd0ff835
+  - enabled: 1
+    path: Assets/Scenes/Importar objeto.unity
+    guid: 75c0353c8512ed940bcdffc82ed48bda
+  - enabled: 1
+    path: Assets/Scenes/First Integration Extrusion+CreatePlane.unity
+    guid: 9e01d98372bedee418c78c63482bd8bc
+  - enabled: 1
+    path: Assets/Scenes/FullSculpt.unity
+    guid: 1c9625ce7fae0c645aac849a607d2fff
   m_configObjects: {}

@@ -20,10 +20,10 @@ public class StandardObject : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         this.gameObject.transform.parent = null;
+
         Destroy(this);
         Destroy(this.gameObject.GetComponent<BoxCollider>());
-        this.gameObject.GetComponent<MeshCollider>().convex = true;
-        this.gameObject.GetComponent<MeshCollider>().isTrigger = true;
+
         DontDestroyOnLoad(this.gameObject);
         StartCoroutine(LoadYourAsyncScene());
     }

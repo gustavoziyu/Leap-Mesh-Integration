@@ -64,6 +64,12 @@ namespace Leap.Unity
         private void Awake()
         {
             target = GameObject.FindWithTag("ModelObject");
+            target.GetComponent<MeshCollider>().convex = false;
+            target.GetComponent<MeshCollider>().isTrigger = false;
+            target.transform.position = new Vector3(-2.867f, 0, 0);
+            target.transform.rotation = new Quaternion(0, 0, 0, 0);
+            target.transform.localScale = new Vector3(1, 1, 1);
+
             watcherCoroutine = checkGesture();
         }
 

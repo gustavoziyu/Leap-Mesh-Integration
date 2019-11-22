@@ -619,6 +619,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
+    <Compile Include="Assets\Scripts\ChooseObjectButton.cs" />
     <Compile Include="Assets\Scripts\ClapDetector.cs" />
     <Compile Include="Assets\Scripts\ColorControl.cs" />
     <Compile Include="Assets\Scripts\CompareMeshes.cs" />
@@ -655,6 +656,7 @@
     <Compile Include="Assets\Scripts\RotateRigidbody.cs" />
     <Compile Include="Assets\Scripts\SinusCurveModifier.cs" />
     <Compile Include="Assets\Scripts\SmoothRandomPosition.cs" />
+    <Compile Include="Assets\Scripts\StandardObject.cs" />
     <Compile Include="Assets\Scripts\Triangulator.cs" />
     <Compile Include="Assets\Scripts\TronTrail.cs" />
     <Compile Include="Assets\Scripts\Twist.cs" />
@@ -710,6 +712,7 @@
     <None Include="Assets\Oculus\SampleFramework\Core\DebugUI\Fonts\Montserrat\OFL.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBSV2.shader" />
     <None Include="Assets\LeapMotion\Core\Version.txt" />
+    <None Include="Assets\Fonts\ShyFonts Font License.txt" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\LeapMotion\Core\Shaders\VertexOffsetShader.shader" />

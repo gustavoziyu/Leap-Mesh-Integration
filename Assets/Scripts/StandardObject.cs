@@ -34,7 +34,7 @@ public class StandardObject : MonoBehaviour
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("First Integration Rotation+Scale");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FullSculpt");
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

@@ -53,6 +53,8 @@ namespace Leap.Unity
 
         private void Awake()
         {
+            GameObject.Find("Editar modelo").SetActive(false);
+            GameObject.Find("TextEdit").SetActive(false);
             watcherCoroutine = checkGesture();
         }
 
@@ -73,6 +75,14 @@ namespace Leap.Unity
 
             if (target == null)
                 print("No object in scene with tag Plane. Please create a plane before extrusion.");
+
+            target.AddComponent<MeshCollider>();
+            GameObject menu = GameObject.Find("Menu");
+            menu.transform.GetChild(0).gameObject.SetActive(true);
+            GameObject.Find("Background").transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+
+            GameObject.Find("Editar modelo").GetComponent<EditExtrudedPlane>().objectModel = target;
+            menu.GetComponent<EditExtrudedModelSpeech>().extrudedObject = target;
 
             Vector3[] poly = new Vector3[] {
             //triangle

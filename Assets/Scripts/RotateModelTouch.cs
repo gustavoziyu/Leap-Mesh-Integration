@@ -68,7 +68,7 @@ namespace Leap.Unity
             target.GetComponent<MeshCollider>().isTrigger = false;
             target.transform.position = new Vector3(-2.867f, 0, 0);
             target.transform.rotation = new Quaternion(0, 0, 0, 0);
-            target.transform.localScale = new Vector3(1, 1, 1);
+            target.transform.localScale = new Vector3(2, 2, 2);
 
             watcherCoroutine = checkGesture();
         }

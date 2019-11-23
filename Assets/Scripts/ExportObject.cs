@@ -28,7 +28,6 @@ public class ExportObject : MonoBehaviour
         objExp.exportCall();
 
         modelObj.transform.parent = null;
-        Destroy(this);
         Destroy(modelObj.GetComponent<BoxCollider>());
         Destroy(modelObj.GetComponent<ObjExporter>());
         Destroy(modelObj.GetComponent<displayObjectModel>());

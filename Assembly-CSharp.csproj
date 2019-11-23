@@ -63,9 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
+    <Compile Include="Assets\displayExistingObject.cs" />
     <Compile Include="Assets\EditExtrudedModelSpeech.cs" />
     <Compile Include="Assets\ForceReserialize.cs" />
+    <Compile Include="Assets\InitialSpeech.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />
@@ -313,6 +316,7 @@
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\IgnoreCollisionsInChildren.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\KabschSolver.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
+    <Compile Include="Assets\LearnSpeech.cs" />
     <Compile Include="Assets\MaterialController.cs" />
     <Compile Include="Assets\OBJExport\OBJExporter.cs" />
     <Compile Include="Assets\OBJImport\CharWordReader.cs" />
@@ -632,8 +636,10 @@
     <Compile Include="Assets\Scripts\CreatePlaneFromPoints.cs" />
     <Compile Include="Assets\Scripts\CrumpleMesh.cs" />
     <Compile Include="Assets\Scripts\displayImportObject.cs" />
+    <Compile Include="Assets\Scripts\displayObjectModel.cs" />
     <Compile Include="Assets\Scripts\DrawWithFinger.cs" />
     <Compile Include="Assets\Scripts\EditExtrudedPlane.cs" />
+    <Compile Include="Assets\Scripts\ExportObject.cs" />
     <Compile Include="Assets\Scripts\ExtrudedMeshTrail.cs" />
     <Compile Include="Assets\Scripts\FingerRaycast.cs" />
     <Compile Include="Assets\Scripts\FingerRaycastTouch.cs" />

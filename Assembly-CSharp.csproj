@@ -668,6 +668,7 @@
     <Compile Include="Assets\Scripts\SinusCurveModifier.cs" />
     <Compile Include="Assets\Scripts\SmoothRandomPosition.cs" />
     <Compile Include="Assets\Scripts\StandardObject.cs" />
+    <Compile Include="Assets\Scripts\TextFadeOut.cs" />
     <Compile Include="Assets\Scripts\Triangulator.cs" />
     <Compile Include="Assets\Scripts\TronTrail.cs" />
     <Compile Include="Assets\Scripts\Twist.cs" />

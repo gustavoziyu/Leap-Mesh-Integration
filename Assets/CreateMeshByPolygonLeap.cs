@@ -9,6 +9,7 @@
   ******************************************************************************/
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using Leap.Unity.Attributes;
 
@@ -55,6 +56,14 @@ namespace Leap.Unity
         {
             GameObject.Find("Editar modelo").SetActive(false);
             GameObject.Find("TextEdit").SetActive(false);
+            GameObject textError = GameObject.Find("TextErrorDisplay");
+            if(textError != null)
+            {
+                textError.transform.parent = GameObject.Find("Background").transform.GetChild(0);
+                textError.transform.position = GameObject.Find("TextError").transform.position;
+                textError.GetComponent<TextFadeOut>().FadeOut();
+            }
+
             watcherCoroutine = checkGesture();
         }
 

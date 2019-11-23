@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Leap.Unity.Attributes;
+using UnityEngine.SceneManagement;
 
 namespace Leap.Unity
 {
@@ -24,6 +25,8 @@ namespace Leap.Unity
         [Tooltip("The interval in seconds at which to check this detector's conditions.")]
         [MinValue(0)]
         public float Period = .1f; //seconds
+
+        public Material diffuseMaterial;
 
 
         /**
@@ -198,10 +201,13 @@ namespace Leap.Unity
                 }
             }
 
-            if (isPoly)
+            if (isPoly && markers.Count > 2)
             {
                 createdPlan = Instantiate(plan, polyCenter, Quaternion.Euler(0.0f, 0.0f, 0.0f));
                 createdPlan.GetComponent<Triangulator>().createPolygon(markers, markers.Count);
+
+                createdPlan.GetComponent<MeshRenderer>().material = diffuseMaterial;
+
                 createdPlan.tag = "Plane";
                 gameObject.GetComponent<CreateMeshByPolygonLeap>().Setup();
                 gameObject.GetComponent<RotateModel>().target = createdPlan;
@@ -216,7 +222,13 @@ namespace Leap.Unity
             }
             else
             {
-                Debug.Log("Failure!");
+                Debug.Log("CreatePlaneFromPoints: can't form a polygon with this set of points.");
+                GameObject textError = GameObject.Find("TextError");
+                textError.GetComponent<TextFadeOut>().setToOriginalColor();
+                textError.transform.parent = null;
+                textError.name = "TextErrorDisplay";
+                DontDestroyOnLoad(textError);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 

@@ -10,6 +10,8 @@ public class displayExistingObject : MonoBehaviour
     private string objPath;
     string error = string.Empty;
     public GameObject loadedObject;
+    private float maxSizeXZ = 0.3f;
+    private float maxSizeY = 0.25f;
 
     void Start()
     {
@@ -44,6 +46,8 @@ public class displayExistingObject : MonoBehaviour
             loadedObject.transform.position = this.transform.position;
             loadedObject.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
             error = string.Empty;
+
+            resizeObject(newObject);
         }
     }
 
@@ -52,6 +56,27 @@ public class displayExistingObject : MonoBehaviour
         if (loadedObject)
         {
             loadedObject.transform.Rotate(0, 50 * Time.deltaTime, 0);
+        }
+    }
+
+    private void resizeObject(GameObject newObject)
+    {
+        Vector3 sizeOfObject = newObject.GetComponent<Renderer>().bounds.size;
+
+        if(sizeOfObject.x > maxSizeXZ && sizeOfObject.x >= sizeOfObject.y && sizeOfObject.x >= sizeOfObject.z)
+        {
+            float newScaleFactor = sizeOfObject.x / maxSizeXZ;
+            newObject.transform.localScale = newObject.transform.localScale / newScaleFactor;
+        }
+        else if (sizeOfObject.y > maxSizeY && sizeOfObject.y >= sizeOfObject.x && sizeOfObject.y >= sizeOfObject.z)
+        {
+            float newScaleFactor = sizeOfObject.y / maxSizeY;
+            newObject.transform.localScale = newObject.transform.localScale / newScaleFactor;
+        }
+        else if (sizeOfObject.z > maxSizeXZ && sizeOfObject.z >= sizeOfObject.x && sizeOfObject.x >= sizeOfObject.y)
+        {
+            float newScaleFactor = sizeOfObject.z / maxSizeXZ;
+            newObject.transform.localScale = newObject.transform.localScale / newScaleFactor;
         }
     }
     private void setChooseObjectExportSpeech()

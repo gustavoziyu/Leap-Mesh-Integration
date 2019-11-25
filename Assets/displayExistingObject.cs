@@ -12,6 +12,7 @@ public class displayExistingObject : MonoBehaviour
     public GameObject loadedObject;
     private float maxSizeXZ = 0.3f;
     private float maxSizeY = 0.25f;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
@@ -37,6 +38,8 @@ public class displayExistingObject : MonoBehaviour
             newObject.GetComponent<MeshCollider>().isTrigger = true;
             newObject.AddComponent<ExportObject>();
             newObject.GetComponent<ExportObject>().workingPath = objName;
+            newObject.GetComponent<ExportObject>().editScene = editScene;
+
 
             newObject.AddComponent<BoxCollider>();
             newObject.GetComponent<BoxCollider>().isTrigger = true;

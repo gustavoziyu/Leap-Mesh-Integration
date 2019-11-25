@@ -13,6 +13,7 @@ public class ChooseObjectExportSpeech : MonoBehaviour
     public String first;
     public String second;
     public String third;
+    public String editScene = "FullSculpt";
 
     void Start()
     {
@@ -61,7 +62,7 @@ public class ChooseObjectExportSpeech : MonoBehaviour
         Destroy(modelObj.GetComponent<displayObjectModel>());
 
         DontDestroyOnLoad(modelObj);
-        StartCoroutine(LoadYourAsyncScene("FullSculpt"));
+        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

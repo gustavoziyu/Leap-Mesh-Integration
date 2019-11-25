@@ -11,6 +11,9 @@ public class InitialSpeech : MonoBehaviour
     [SerializeField]
     public string[] keywordsModo;
 
+    public string learnScene = "Escolher dificuldade";
+    public string createScene = "Escolher objeto inicial";
+
     void Start()
     {
         keywordsModo = new string[2];
@@ -27,11 +30,11 @@ public class InitialSpeech : MonoBehaviour
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
             if (args.text == "Aprender")
             {
-                StartCoroutine(LoadYourAsyncScene("Escolher dificuldade"));
+                StartCoroutine(LoadYourAsyncScene(learnScene));
             }
             else if (args.text == "Criar")
             {
-                StartCoroutine(LoadYourAsyncScene("Escolher objeto inicial"));
+                StartCoroutine(LoadYourAsyncScene(createScene));
             }
     }
 

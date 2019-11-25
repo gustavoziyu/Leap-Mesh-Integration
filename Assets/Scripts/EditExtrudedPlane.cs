@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EditExtrudedPlane : MonoBehaviour
 {
-    private String sceneName = "FullSculpt";
+    public String sceneName = "FullSculpt";
     public GameObject objectModel;
     private bool lockX = true;
     private bool lockY = true;

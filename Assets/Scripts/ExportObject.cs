@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExportObject : MonoBehaviour
 {
     public string workingPath;
+    public string editScene = "FullSculpt";
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class ExportObject : MonoBehaviour
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FullSculpt");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(editScene);
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

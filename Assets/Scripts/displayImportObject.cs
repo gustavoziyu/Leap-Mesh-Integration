@@ -12,6 +12,7 @@ public class displayImportObject : MonoBehaviour
     public GameObject loadedObject;
     private float maxSizeXZ = 0.3f;
     private float maxSizeY = 0.25f;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class displayImportObject : MonoBehaviour
             newObject.GetComponent<MeshCollider>().convex = true;
             newObject.GetComponent<MeshCollider>().isTrigger = true;
             newObject.AddComponent<StandardObject>();
+            newObject.GetComponent<StandardObject>().editScene = editScene;
 
             newObject.AddComponent<BoxCollider>();
             newObject.GetComponent<BoxCollider>().isTrigger = true;

@@ -11,6 +11,11 @@ public class ChooseObjectSpeech : MonoBehaviour
     [SerializeField]
     public string[] keywordsModo;
 
+    public string standardObjectScene = "Objeto padrão";
+    public string extrusionScene = "First Integration Extrusion+CreatePlane";
+    public string revolutionScene = "Objeto padrão";
+    public string importScene = "Importar objeto";
+
     void Start()
     {
         keywordsModo = new string[4];
@@ -29,11 +34,11 @@ public class ChooseObjectSpeech : MonoBehaviour
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
             if (args.text == "Template")
             {
-                StartCoroutine(LoadYourAsyncScene("Objeto padrão"));
+                StartCoroutine(LoadYourAsyncScene(standardObjectScene));
             }
             else if (args.text == "Extrusão")
             {
-                StartCoroutine(LoadYourAsyncScene("First Integration Extrusion+CreatePlane"));
+                StartCoroutine(LoadYourAsyncScene(extrusionScene));
             }
             else if (args.text == "Revolução")
             {
@@ -41,7 +46,7 @@ public class ChooseObjectSpeech : MonoBehaviour
             }
             else if (args.text == "Importar")
             {
-                StartCoroutine(LoadYourAsyncScene("Importar objeto"));
+                StartCoroutine(LoadYourAsyncScene(importScene));
             }
     }
 

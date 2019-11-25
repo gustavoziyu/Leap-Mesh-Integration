@@ -13,6 +13,7 @@ public class chooseStandardObjectSpeech : MonoBehaviour
     public GameObject cube;
     public GameObject sphere;
     public GameObject capsule;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
@@ -50,7 +51,7 @@ public class chooseStandardObjectSpeech : MonoBehaviour
         toSaveObject.GetComponent<MeshCollider>().convex = true;
         toSaveObject.GetComponent<MeshCollider>().isTrigger = true;
         DontDestroyOnLoad(toSaveObject);
-        StartCoroutine(LoadYourAsyncScene("FullSculpt"));
+        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

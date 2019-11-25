@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StandardObject : MonoBehaviour
 {
+    public string editScene = "FullSculpt";
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -34,7 +36,7 @@ public class StandardObject : MonoBehaviour
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FullSculpt");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(editScene);
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

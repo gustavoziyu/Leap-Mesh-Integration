@@ -11,6 +11,7 @@ public class EditExtrudedModelSpeech : MonoBehaviour
     [SerializeField]
     public string[] keywordsModo;
     public GameObject extrudedObject;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
@@ -40,7 +41,7 @@ public class EditExtrudedModelSpeech : MonoBehaviour
         Destroy(extrudedObject.GetComponent<Triangulator>());
 
         DontDestroyOnLoad(extrudedObject);
-        StartCoroutine(LoadYourAsyncScene("FullSculpt"));
+        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

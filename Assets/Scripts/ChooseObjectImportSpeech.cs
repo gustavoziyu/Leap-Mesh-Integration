@@ -13,6 +13,7 @@ public class ChooseObjectImportSpeech : MonoBehaviour
     public GameObject first;
     public GameObject second;
     public GameObject third;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
@@ -50,7 +51,7 @@ public class ChooseObjectImportSpeech : MonoBehaviour
         toSaveObject.GetComponent<MeshCollider>().convex = true;
         toSaveObject.GetComponent<MeshCollider>().isTrigger = true;
         DontDestroyOnLoad(toSaveObject);
-        StartCoroutine(LoadYourAsyncScene("FullSculpt"));
+        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

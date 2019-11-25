@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leap Mesh Integration", "Assembly-CSharp.csproj", "{C3050F97-7E01-1916-2191-6E72C40DF51E}"
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{01E8B5BD-3FB5-A89C-F9C5-5E68AF47D387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leap Mesh Integration", "Assembly-CSharp-Editor.csproj", "{78E569BF-C556-0763-D4D9-C22910A21223}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{EBEC9C29-8DB6-7812-36F5-424C7B7A79D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3050F97-7E01-1916-2191-6E72C40DF51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3050F97-7E01-1916-2191-6E72C40DF51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3050F97-7E01-1916-2191-6E72C40DF51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3050F97-7E01-1916-2191-6E72C40DF51E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78E569BF-C556-0763-D4D9-C22910A21223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78E569BF-C556-0763-D4D9-C22910A21223}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78E569BF-C556-0763-D4D9-C22910A21223}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78E569BF-C556-0763-D4D9-C22910A21223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E8B5BD-3FB5-A89C-F9C5-5E68AF47D387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E8B5BD-3FB5-A89C-F9C5-5E68AF47D387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E8B5BD-3FB5-A89C-F9C5-5E68AF47D387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E8B5BD-3FB5-A89C-F9C5-5E68AF47D387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBEC9C29-8DB6-7812-36F5-424C7B7A79D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBEC9C29-8DB6-7812-36F5-424C7B7A79D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBEC9C29-8DB6-7812-36F5-424C7B7A79D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBEC9C29-8DB6-7812-36F5-424C7B7A79D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

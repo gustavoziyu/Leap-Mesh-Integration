@@ -645,10 +645,12 @@
      <Compile Include="Assets\Scripts\LightningBolt.cs" />
      <Compile Include="Assets\Scripts\LineCollider.cs" />
      <Compile Include="Assets\Scripts\ManagerImpExp.cs" />
+     <Compile Include="Assets\Scripts\ManagerImpExpTest.cs" />
      <Compile Include="Assets\Scripts\MaterialChange.cs" />
      <Compile Include="Assets\Scripts\MaterialEditor.cs" />
      <Compile Include="Assets\Scripts\ObjDisplay.cs" />
      <Compile Include="Assets\Scripts\ObjExporter.cs" />
+     <Compile Include="Assets\Scripts\ObjExporterTest.cs" />
      <Compile Include="Assets\Scripts\ObjFromFile.cs" />
      <Compile Include="Assets\Scripts\OculusTouchDebug.cs" />
      <Compile Include="Assets\Scripts\PaintVertices.cs" />

@@ -393,11 +393,11 @@ GameObject:
   - component: {fileID: 955655035}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: ModelObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &955655035
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 1207140083}
   - component: {fileID: 1207140084}
   - component: {fileID: 1207140085}
+  - component: {fileID: 1207140086}
   m_Layer: 0
   m_Name: Leap Rig
   m_TagString: Untagged
@@ -605,6 +606,21 @@ MonoBehaviour:
   HandModelRight: {fileID: 53571037}
   target: {fileID: 955655034}
   intensity: 1
+--- !u!114 &1207140086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207140080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fcda41588b02e41b07987a90d3e976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Undo: 122
+  FingerDeform: {fileID: 164149221}
+  keywordsModo: []
 --- !u!1001 &1420235709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,6 +1510,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.17201717
       objectReference: {fileID: 0}
+    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 54010693120870228, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -1525,11 +1546,6 @@ PrefabInstance:
       value: 0.29100025
       objectReference: {fileID: 0}
     - target: {fileID: 54595437679376708, guid: e5874351f2a4f164d9a22fd358f9ccc8,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
       value: 3
@@ -2148,7 +2164,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.737e-42, y: 1.02e-43, z: 5.26e-42, w: 0}
+  m_BoundingSphereOverride: {x: NaN, y: 9.317786e-18, z: 4.5905e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

@@ -640,6 +640,7 @@
      <Compile Include="Assets\Scripts\HeightmapGenerator.cs" />
      <Compile Include="Assets\Scripts\InitialRigidbodyVelocity.cs" />
      <Compile Include="Assets\Scripts\InputManager.cs" />
+     <Compile Include="Assets\Scripts\InputManagerTouch.cs" />
      <Compile Include="Assets\Scripts\KeywordScript.cs" />
      <Compile Include="Assets\Scripts\LightningBolt.cs" />
      <Compile Include="Assets\Scripts\LineCollider.cs" />

@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class StandardObject : MonoBehaviour
 {
     public string editScene = "FullSculpt";
-
     // Start is called before the first frame update
     void Start()
     {   
@@ -16,7 +15,6 @@ public class StandardObject : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 50 * Time.deltaTime, 0);
-        
     }
     
     private void OnTriggerEnter(Collider other)

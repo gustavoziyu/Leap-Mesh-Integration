@@ -67,6 +67,7 @@
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
     <Compile Include="Assets\displayExistingObject.cs" />
     <Compile Include="Assets\EditExtrudedModelSpeech.cs" />
+    <Compile Include="Assets\FixPosition.cs" />
     <Compile Include="Assets\ForceReserialize.cs" />
     <Compile Include="Assets\InitialSpeech.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />

@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class CreateMeshByRotation : MonoBehaviour
 {
+    [Range(0.001f, Mathf.PI/2)]
     public float alpha = Mathf.PI/2; //step of revolution, should divide 2*PI exactly to better results
     public Vector3[] curve; //set of points that form the curve
     private List<Vector3> verticesList; //vertices of the mesh
     private Dictionary<Vector3, int> positionInVerticesList; //used to calculate the triangles indexes
     private int numberOfVertices = 0; //enumerate the vertices
     private List<int> triangles = new List<int>(); //triangles of the mesh
+    private float previousAlpha;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        previousAlpha = alpha;
         positionInVerticesList = new Dictionary<Vector3, int>();
         verticesList = new List<Vector3>();
         curve = new Vector3[50];
@@ -24,7 +28,7 @@ public class CreateMeshByRotation : MonoBehaviour
             x += 0.25f;
         }
 
-        curve = new Vector3[] { new Vector3(3, 1, 0), new Vector3(10, -3, 0) };
+        curve = new Vector3[] { new Vector3(-1, 2, 0), new Vector3(1, 1, 0), new Vector3(-1, -3, 0), new Vector3(-5, -3, 0), new Vector3(-6, -5, 0) };
         
         this.gameObject.GetComponent<MeshFilter>().mesh = createMesh();
 
@@ -34,7 +38,15 @@ public class CreateMeshByRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (alpha != previousAlpha)
+        {
+            previousAlpha = alpha;
+            positionInVerticesList.Clear();
+            verticesList.Clear();
+            numberOfVertices = 0;
+            triangles.Clear();
+            this.gameObject.GetComponent<MeshFilter>().mesh = createMesh();
+        }
     }
 
     //creates the mesh by rotating each pair of consecutive points.

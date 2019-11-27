@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a390cf4f2aebd1444a0c81ca539f852b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alpha: 0.1
+  alpha: 1.5707964
   curve: []
 --- !u!23 &1473165533
 MeshRenderer:

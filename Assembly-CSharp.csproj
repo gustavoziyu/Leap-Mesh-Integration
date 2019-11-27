@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
+    <Compile Include="Assets\CreateMeshByRotation.cs" />
     <Compile Include="Assets\displayExistingObject.cs" />
     <Compile Include="Assets\EditExtrudedModelSpeech.cs" />
     <Compile Include="Assets\FixPosition.cs" />

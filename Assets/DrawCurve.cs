@@ -42,6 +42,9 @@ namespace Leap.Unity
         [Tooltip("Y Axis.")]
         public GameObject Yaxis = null;
 
+        [Tooltip("All the markers.")]
+        public GameObject curveObj = null;
+
         private List<GameObject> markers = new List<GameObject>();
         private List<GameObject> lines = new List<GameObject>();
 
@@ -67,6 +70,8 @@ namespace Leap.Unity
         {
             GameObject.Find("Editar modelo").SetActive(false);
             GameObject.Find("TextEdit").SetActive(false);
+            GameObject.Find("Background").GetComponent<RotateModel>().enabled = false;
+
 
             watcherCoroutine = checkGesture();
         }
@@ -117,6 +122,7 @@ namespace Leap.Unity
                                 {
                                     lastMarker = Instantiate(marker, usedHand.Fingers[1].TipPosition.ToVector3(), Quaternion.Euler(0.0f, 0.0f, 0.0f));
                                     if (vCount > 0) lastMarker.transform.position = new Vector3(lastMarker.transform.position.x, lastMarker.transform.position.y, depth);
+                                    lastMarker.transform.parent = curveObj.transform;
                                     markers.Add(lastMarker);
                                     curve.Add(new Vector3(lastMarker.transform.position.x, lastMarker.transform.position.y, 0));
                                     if (vCount == 0)
@@ -138,7 +144,7 @@ namespace Leap.Unity
                                         currentLine.transform.LookAt(start.position, Vector3.back);
 
                                         currentLine.transform.Rotate(90, 0, 0); // Corrige rotação
-
+                                        currentLine.transform.parent = curveObj.transform;
                                         lines.Add(currentLine);
 
                                         start = target;
@@ -169,7 +175,7 @@ namespace Leap.Unity
                     {
                         if (!finished)
                         {
-                            createCurve();
+                            createMesh();
                             finished = true;
                         }
                     }
@@ -180,7 +186,7 @@ namespace Leap.Unity
         }
 
 
-        private void createCurve()
+        private void createMesh()
         {
             objectModel.GetComponent<CreateMeshByRotation>().curve = curve.ToArray();
             Mesh m = objectModel.GetComponent<CreateMeshByRotation>().createMesh();
@@ -188,6 +194,17 @@ namespace Leap.Unity
             objectModel.GetComponent<MeshCollider>().sharedMesh = m;
             GameObject.Find("Menu").transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("Background").transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            GameObject.Find("Background").GetComponent<RotateModel>().enabled = true;
+            GameObject.Find("Background").GetComponent<MoveCurve>().enabled = false;
+        }
+
+        public void updateCurve()
+        {
+            curve.Clear();
+            foreach(GameObject marker in markers)
+            {
+                curve.Add(new Vector3(marker.transform.position.x, marker.transform.position.y, 0));
+            }
         }
     }
 

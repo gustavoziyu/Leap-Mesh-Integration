@@ -323,6 +323,7 @@
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
     <Compile Include="Assets\LearnSpeech.cs" />
     <Compile Include="Assets\MaterialController.cs" />
+    <Compile Include="Assets\MoveCurve.cs" />
     <Compile Include="Assets\OBJExport\OBJExporter.cs" />
     <Compile Include="Assets\OBJImport\CharWordReader.cs" />
     <Compile Include="Assets\OBJImport\MTLLoader.cs" />

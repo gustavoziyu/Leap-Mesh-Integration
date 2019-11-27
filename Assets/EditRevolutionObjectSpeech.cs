@@ -4,25 +4,19 @@ using System.Collections;
 using UnityEngine.Windows.Speech;
 using UnityEngine.SceneManagement;
 
-public class ChooseObjectSpeech : MonoBehaviour
+public class EditRevolutionObjectSpeech : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer;
 
     [SerializeField]
     public string[] keywordsModo;
-
-    public string standardObjectScene = "Objeto padrão";
-    public string extrusionScene = "First Integration Extrusion+CreatePlane";
-    public string revolutionScene = "Revolução";
-    public string importScene = "Importar objeto";
+    public GameObject modelObject;
+    public string editScene = "FullSculpt";
 
     void Start()
     {
-        keywordsModo = new string[4];
-        keywordsModo[0] = "Template";
-        keywordsModo[1] = "Extrusão";
-        keywordsModo[2] = "Revolução";
-        keywordsModo[3] = "Importar";
+        keywordsModo = new string[1];
+        keywordsModo[0] = "Editar";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -32,22 +26,22 @@ public class ChooseObjectSpeech : MonoBehaviour
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
     {
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
-            if (args.text == "Template")
+            if (args.text == "Editar")
             {
-                StartCoroutine(LoadYourAsyncScene(standardObjectScene));
+                if (modelObject == null)
+                    Debug.Log("Must define the object first.");
+                else
+                    SaveObject();
             }
-            else if (args.text == "Extrusão")
-            {
-                StartCoroutine(LoadYourAsyncScene(extrusionScene));
-            }
-            else if (args.text == "Revolução")
-            {
-                StartCoroutine(LoadYourAsyncScene(revolutionScene));
-            }
-            else if (args.text == "Importar")
-            {
-                StartCoroutine(LoadYourAsyncScene(importScene));
-            }
+    }
+    private void SaveObject()
+    {
+        modelObject.transform.parent = null;
+        modelObject.tag = "ModelObject";
+        Destroy(modelObject.GetComponent<CreateMeshByRotation>());
+
+        DontDestroyOnLoad(modelObject);
+        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

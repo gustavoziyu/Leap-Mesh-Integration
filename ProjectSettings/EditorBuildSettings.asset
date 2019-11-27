@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tela inicial.unity
     guid: 64355a3af9038864cb6ab2fa88fc5e7e
   - enabled: 1
+    path: "Assets/Scenes/Revolu\xE7\xE3o.unity"
+    guid: 4a9eff7cc0a5db241ad04bcc1f10a7fb
+  - enabled: 1
     path: Assets/Scenes/Display Imports.unity
     guid: 3d9bbbc52bbba594ca9d3d20d1d70572
   - enabled: 1
@@ -53,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Beta/Objeto padr\xE3o - Beta.unity"
     guid: bd32186025172df4a8130b549fbdfff7
+  - enabled: 1
+    path: "Assets/Scenes/Beta/Revolu\xE7\xE3o - Beta.unity"
+    guid: cf57537207ab98b459d66361393d1ca4
   - enabled: 1
     path: Assets/Scenes/Beta/Tela inicial - Beta.unity
     guid: 66b2f21defcb75640be8015fb0c249d9

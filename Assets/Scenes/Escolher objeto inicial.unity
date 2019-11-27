@@ -247,6 +247,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keywordsModo: []
+  standardObjectScene: "Objeto padr\xE3o"
+  extrusionScene: First Integration Extrusion+CreatePlane
+  revolutionScene: "Revolu\xE7\xE3o"
+  importScene: Importar objeto
 --- !u!1 &90724304
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +562,7 @@ GameObject:
   - component: {fileID: 264451804}
   - component: {fileID: 264451803}
   - component: {fileID: 264451802}
+  - component: {fileID: 264451807}
   m_Layer: 0
   m_Name: "Revolu\xE7\xE3o"
   m_TagString: Untagged
@@ -676,6 +681,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264451800}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &264451807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264451800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b735cf33476e7f34fbfcfb4340dcb9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: "Revolu\xE7\xE3o"
 --- !u!1 &275052957
 GameObject:
   m_ObjectHideFlags: 0

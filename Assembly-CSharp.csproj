@@ -67,7 +67,10 @@
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
     <Compile Include="Assets\CreateMeshByRotation.cs" />
     <Compile Include="Assets\displayExistingObject.cs" />
+    <Compile Include="Assets\DrawCurve.cs" />
     <Compile Include="Assets\EditExtrudedModelSpeech.cs" />
+    <Compile Include="Assets\EditRevolutionObject.cs" />
+    <Compile Include="Assets\EditRevolutionObjectSpeech.cs" />
     <Compile Include="Assets\FixPosition.cs" />
     <Compile Include="Assets\ForceReserialize.cs" />
     <Compile Include="Assets\InitialSpeech.cs" />

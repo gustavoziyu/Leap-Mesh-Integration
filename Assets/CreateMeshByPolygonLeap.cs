@@ -86,6 +86,7 @@ namespace Leap.Unity
                 print("No object in scene with tag Plane. Please create a plane before extrusion.");
 
             target.AddComponent<MeshCollider>();
+            target.name = "Extrusion";
             GameObject menu = GameObject.Find("Menu");
             menu.transform.GetChild(0).gameObject.SetActive(true);
             GameObject.Find("Background").transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
@@ -174,6 +175,7 @@ namespace Leap.Unity
                                     }
 
                                     mesh.vertices = vertices;
+                                    this.target.GetComponent<MeshCollider>().sharedMesh = mesh;
                                 }
 
                             }

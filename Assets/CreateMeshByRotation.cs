@@ -20,18 +20,7 @@ public class CreateMeshByRotation : MonoBehaviour
         previousAlpha = alpha;
         positionInVerticesList = new Dictionary<Vector3, int>();
         verticesList = new List<Vector3>();
-        curve = new Vector3[50];
-        float x = 0;
-        for(int i=0; i < 50; i++)
-        {
-            curve[i] = new Vector3(x, Mathf.Sin(x),0);
-            x += 0.25f;
-        }
-
-        curve = new Vector3[] { new Vector3(-1, 2, 0), new Vector3(1, 1, 0), new Vector3(-1, -3, 0), new Vector3(-5, -3, 0), new Vector3(-6, -5, 0) };
-        
-        this.gameObject.GetComponent<MeshFilter>().mesh = createMesh();
-
+        //testCurve();
 
     }
 
@@ -149,5 +138,21 @@ public class CreateMeshByRotation : MonoBehaviour
             numberOfVertices++;
             this.verticesList.Add(vertice);
         }
+    }
+
+    private void testCurve() 
+    {
+        curve = new Vector3[50];
+        float x = 0;
+        for(int i=0; i < 50; i++)
+        {
+            curve[i] = new Vector3(x, Mathf.Sin(x),0);
+            x += 0.25f;
+        }
+
+        curve = new Vector3[] { new Vector3(-1, 2, 0), new Vector3(1, 1, 0), new Vector3(-1, -3, 0), new Vector3(-5, -3, 0), new Vector3(-6, -5, 0) };
+        
+        this.gameObject.GetComponent<MeshFilter>().mesh = createMesh();
+
     }
 }

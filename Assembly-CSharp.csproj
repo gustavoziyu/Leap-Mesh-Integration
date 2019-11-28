@@ -630,6 +630,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
+    <Compile Include="Assets\rotateObject.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectButton.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectImportSpeech.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectSpeech.cs" />
@@ -654,14 +655,17 @@
     <Compile Include="Assets\Scripts\HeightmapGenerator.cs" />
     <Compile Include="Assets\Scripts\InitialRigidbodyVelocity.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\InputManagerTouch.cs" />
     <Compile Include="Assets\Scripts\KeywordScript.cs" />
     <Compile Include="Assets\Scripts\LightningBolt.cs" />
     <Compile Include="Assets\Scripts\LineCollider.cs" />
     <Compile Include="Assets\Scripts\ManagerImpExp.cs" />
+    <Compile Include="Assets\Scripts\ManagerImpExpTest.cs" />
     <Compile Include="Assets\Scripts\MaterialChange.cs" />
     <Compile Include="Assets\Scripts\MaterialEditor.cs" />
     <Compile Include="Assets\Scripts\ObjDisplay.cs" />
     <Compile Include="Assets\Scripts\ObjExporter.cs" />
+    <Compile Include="Assets\Scripts\ObjExporterTest.cs" />
     <Compile Include="Assets\Scripts\ObjFromFile.cs" />
     <Compile Include="Assets\Scripts\OculusTouchDebug.cs" />
     <Compile Include="Assets\Scripts\PaintVertices.cs" />

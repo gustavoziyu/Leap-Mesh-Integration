@@ -616,6 +616,7 @@
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
      <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
+     <Compile Include="Assets\rotateObject.cs" />
      <Compile Include="Assets\Scripts\ChooseObjectButton.cs" />
      <Compile Include="Assets\Scripts\ChooseObjectImportSpeech.cs" />
      <Compile Include="Assets\Scripts\ChooseObjectSpeech.cs" />

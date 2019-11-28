@@ -8,6 +8,8 @@ public class uiPanel : MonoBehaviour {
 	public GameObject colorPanel;
 	public Transform thumb;
     public Image ColorBar;
+    public GameObject target;
+
 
     [Header("Config")]
 	public Transform Picker;
@@ -31,12 +33,9 @@ public class uiPanel : MonoBehaviour {
             Picker.position += Vector3.right * -.01f;
 		
 		if(Input.GetKey("right"))
-            Picker.position += Vector3.right * .01f;		
+            Picker.position += Vector3.right * .01f;
 
-		RaycastHit hit;
-		Ray  ray = new Ray(Picker.position, Picker.forward);
-		if(Physics.Raycast(ray, out hit))		
-			SetThumbPosition(hit.point);
+        SetThumbPosition(Picker.position);
 	}
 
     private void SetThumbPosition(Vector3 point)
@@ -72,5 +71,6 @@ public class uiPanel : MonoBehaviour {
 	{
 		print (_Color.ToString("F2"));
         ColorBar.color = _Color;
-	}
+        target.GetComponent<MeshRenderer>().material.SetColor("_Color", _Color);
+    }
 }

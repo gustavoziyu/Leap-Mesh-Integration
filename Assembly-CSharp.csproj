@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChooseLearnModelSpeech.cs" />
     <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
     <Compile Include="Assets\CreateMeshByRotation.cs" />
@@ -321,6 +322,7 @@
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\IgnoreCollisionsInChildren.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\KabschSolver.cs" />
     <Compile Include="Assets\LeapMotion\Modules\InteractionEngine\Scripts\Utility\PhysicsCallbacks.cs" />
+    <Compile Include="Assets\LearnModel.cs" />
     <Compile Include="Assets\LearnSpeech.cs" />
     <Compile Include="Assets\MaterialController.cs" />
     <Compile Include="Assets\MoveCurve.cs" />
@@ -630,6 +632,9 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\Helpers\OVRMicInput.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
+    <Compile Include="Assets\PresetChangeMaterial.cs" />
+    <Compile Include="Assets\presetObjects.cs" />
+    <Compile Include="Assets\RotateModelMaterial.cs" />
     <Compile Include="Assets\rotateObject.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectButton.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectImportSpeech.cs" />
@@ -690,6 +695,7 @@
     <Compile Include="Assets\Scripts\Utils\Perlin.cs" />
     <Compile Include="Assets\Scripts\Utils\SmoothRandom.cs" />
     <Compile Include="Assets\Scripts\VRButtonPress.cs" />
+    <Compile Include="Assets\SculptSpeech.cs" />
     <Compile Include="Assets\SwipeDetector.cs" />
     <Compile Include="Assets\Triangulator_my.cs" />
     <None Include="Assets\Resources\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

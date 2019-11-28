@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StandardObject : MonoBehaviour
+public class LearnModel : MonoBehaviour
 {
     public string editScene = "FullSculpt";
+    public GameObject initial;
     // Start is called before the first frame update
     void Start()
-    {   
+    {
     }
 
     // Update is called once per frame
@@ -16,16 +17,19 @@ public class StandardObject : MonoBehaviour
     {
         transform.Rotate(0, 50 * Time.deltaTime, 0);
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
         this.gameObject.transform.parent = null;
-        this.gameObject.transform.DetachChildren();
 
         Destroy(this);
         Destroy(this.gameObject.GetComponent<BoxCollider>());
 
         DontDestroyOnLoad(this.gameObject);
+
+        GameObject initialInstance = Instantiate(initial);
+        DontDestroyOnLoad(initialInstance);
+
         StartCoroutine(LoadYourAsyncScene());
     }
     private IEnumerator LoadYourAsyncScene()

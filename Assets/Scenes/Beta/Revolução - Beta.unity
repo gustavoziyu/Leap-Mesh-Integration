@@ -141,6 +141,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314428648}
+  - component: {fileID: 314428651}
+  - component: {fileID: 314428650}
+  - component: {fileID: 314428649}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -163,6 +166,96 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314428649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314428647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c439128d6b74be409a59d6d13360d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Period: 0.1
+  HandModelLeft: {fileID: 2128318746}
+  HandModelRight: {fileID: 959836044}
+  target: {fileID: 514046592}
+  translationIntensity: 0.05
+  translateDistance: 0.3
+  translationHand: 1
+--- !u!114 &314428650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314428647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ac601cf3d794c498851c8e02efa63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Period: 0.1
+  HandModelLeft: {fileID: 2128318746}
+  HandModelRight: {fileID: 959836044}
+  marker: {fileID: 1211580099206812, guid: d149967b76b174045afc2dba3730f9fd, type: 3}
+  objectModel: {fileID: 604657621}
+  Yaxis: {fileID: 795238602}
+  curveObj: {fileID: 514046592}
+  line: {fileID: 1914684020620034, guid: 5f59b7ffa392be3408e5a1b9286e6d99, type: 3}
+  drawingHand: 1
+--- !u!114 &314428651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314428647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1baf6e1ab9a2e34e987d1be07e94471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  Period: 0.02
+  HandModelLeft: {fileID: 2128318746}
+  HandModelRight: {fileID: 959836044}
+  target: {fileID: 604657621}
+  rotationIntensity: 10
+  translationIntensity: 0.05
+  translateDistance: 0.3
+  rotatingHand: 1
 --- !u!1001 &510292414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1079,6 +1172,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5874351f2a4f164d9a22fd358f9ccc8, type: 3}
+--- !u!1 &514046592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514046593}
+  m_Layer: 0
+  m_Name: curveObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &514046593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514046592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &604657621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,84 +1660,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350192462}
   m_CullTransparentMesh: 0
---- !u!1 &1377600954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1806335068430104, guid: 7fb82f567bc866944af8f0555bded944,
-    type: 3}
-  m_PrefabInstance: {fileID: 1691726460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1377600955 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114042045099716194, guid: 7fb82f567bc866944af8f0555bded944,
     type: 3}
   m_PrefabInstance: {fileID: 1691726460}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377600954}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 025cc0fa7b46aa541aba29d28d35ac09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1377600958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377600954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26ac601cf3d794c498851c8e02efa63a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Period: 0.1
-  HandModelLeft: {fileID: 2128318746}
-  HandModelRight: {fileID: 959836044}
-  marker: {fileID: 1211580099206812, guid: d149967b76b174045afc2dba3730f9fd, type: 3}
-  objectModel: {fileID: 604657621}
-  Yaxis: {fileID: 795238602}
-  line: {fileID: 1914684020620034, guid: 5f59b7ffa392be3408e5a1b9286e6d99, type: 3}
-  drawingHand: 1
---- !u!114 &1377600959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377600954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1baf6e1ab9a2e34e987d1be07e94471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Period: 0.02
-  HandModelLeft: {fileID: 2128318746}
-  HandModelRight: {fileID: 959836044}
-  target: {fileID: 604657621}
-  rotationIntensity: 10
-  translationIntensity: 0.05
-  translateDistance: 0.3
-  rotatingHand: 1
 --- !u!1 &1380677449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,7 +2103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keywordsModo: []
   modelObject: {fileID: 604657621}
-  editScene: FullSculpt
+  editScene: FullSculpt - Beta
 --- !u!4 &2092108557
 Transform:
   m_ObjectHideFlags: 0
@@ -2110,7 +2167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa697496cf819114c8569049ca63821c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: FullSculpt
+  sceneName: FullSculpt - Beta
   objectModel: {fileID: 604657621}
 --- !u!54 &2092392209
 Rigidbody:

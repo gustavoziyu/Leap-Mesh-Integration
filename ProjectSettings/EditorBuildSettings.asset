@@ -33,10 +33,13 @@ EditorBuildSettings:
     path: Assets/Scenes/First Integration Extrusion+CreatePlane.unity
     guid: 9e01d98372bedee418c78c63482bd8bc
   - enabled: 1
+    path: Assets/Scenes/Escolher objeto inicial.unity
+    guid: 0d68294eb5db18d408660063903d2b9c
+  - enabled: 1
     path: Assets/Scenes/FullSculpt.unity
     guid: 1c9625ce7fae0c645aac849a607d2fff
-  - enabled: 1
-    path: Assets/Scenes/Beta/Escolher dificuldade - Beta.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/90d1d05d121293042b3e4a2322a621cd
     guid: 90d1d05d121293042b3e4a2322a621cd
   - enabled: 1
     path: Assets/Scenes/Beta/Escolher objeto inicial - Beta.unity
@@ -47,19 +50,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Beta/First Integration Extrusion+CreatePlane - Beta.unity
     guid: 029fb40acfabd8c4b94038a830fd43e1
-  - enabled: 1
-    path: Assets/Scenes/Beta/FullSculpt - Beta.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/c010e30705589bd41a5b9c17311b5764
     guid: c010e30705589bd41a5b9c17311b5764
   - enabled: 1
     path: Assets/Scenes/Beta/Importar objeto - Beta.unity
     guid: a2975be2fe27ea54cac3d1e7a61a3687
-  - enabled: 1
-    path: "Assets/Scenes/Beta/Objeto padr\xE3o - Beta.unity"
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/bd32186025172df4a8130b549fbdfff7
     guid: bd32186025172df4a8130b549fbdfff7
   - enabled: 1
     path: "Assets/Scenes/Beta/Revolu\xE7\xE3o - Beta.unity"
     guid: cf57537207ab98b459d66361393d1ca4
   - enabled: 1
+    path: Assets/Scenes/Beta/ChangeMaterial - Beta.unity
+    guid: 0d3729f40f541a94da5de6c96f50d880
+  - enabled: 1
+    path: Assets/Scenes/Beta/FullSculpt - Beta.unity
+    guid: 29ea20d5aadebc54fbeca1132c03f95f
+  - enabled: 1
     path: Assets/Scenes/Beta/Tela inicial - Beta.unity
     guid: 66b2f21defcb75640be8015fb0c249d9
+  - enabled: 1
+    path: Assets/Scenes/Beta/Escolher dificuldade - Beta.unity
+    guid: 06ec44dff95312341aec26967c899336
+  - enabled: 1
+    path: "Assets/Scenes/Beta/Objeto padr\xE3o - Beta.unity"
+    guid: c4cf7a8eeba57044393f481f20745ad3
   m_configObjects: {}

@@ -4,23 +4,20 @@ using System.Collections;
 using UnityEngine.Windows.Speech;
 using UnityEngine.SceneManagement;
 
-public class chooseStandardObjectSpeech : MonoBehaviour
+public class SculptSpeech : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer;
 
     [SerializeField]
     public string[] keywordsModo;
-    public GameObject cube;
-    public GameObject sphere;
-    public GameObject capsule;
-    public string editScene = "FullSculpt";
+    public string materialScene = "ChangeMaterial";
+    public string compareScene = "CompareMeshes";
 
     void Start()
     {
-        keywordsModo = new string[3];
-        keywordsModo[0] = "Cubo";
-        keywordsModo[1] = "Esfera";
-        keywordsModo[2] = "Cápsula";
+        keywordsModo = new string[2];
+        keywordsModo[0] = "Mudar material";
+        keywordsModo[1] = "Avaliar";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -30,29 +27,28 @@ public class chooseStandardObjectSpeech : MonoBehaviour
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
     {
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
-            if (args.text == "Cubo")
+            if (args.text == "Mudar material")
             {
-                SaveObject(cube);
+                GameObject target = GameObject.FindWithTag("ModelObject");
+                DontDestroyOnLoad(target);
+                StartCoroutine(LoadYourAsyncScene(materialScene));
             }
-            else if (args.text == "Esfera")
+            else if (args.text == "Avaliar")
             {
-                SaveObject(sphere);
+                GameObject goal = GameObject.FindWithTag("GoalModel");
+                if (goal == null)
+                {
+                    Debug.Log("Can't find the goal model object. Did you enter the learn mode?");
+                }
+                else
+                {
+                    GameObject target = GameObject.FindWithTag("ModelObject");
+
+                    DontDestroyOnLoad(target);
+                    DontDestroyOnLoad(goal);
+                    StartCoroutine(LoadYourAsyncScene(compareScene));
+                }
             }
-            else if (args.text == "Cápsula")
-            {
-                SaveObject(capsule);
-            }
-    }
-    private void SaveObject(GameObject toSaveObject)
-    {
-        toSaveObject.transform.parent = null;
-        Destroy(toSaveObject.GetComponent<StandardObject>());
-        Destroy(toSaveObject.GetComponent<BoxCollider>());
-        toSaveObject.GetComponent<MeshCollider>().convex = true;
-        toSaveObject.GetComponent<MeshCollider>().isTrigger = true;
-        toSaveObject.transform.DetachChildren();
-        DontDestroyOnLoad(toSaveObject);
-        StartCoroutine(LoadYourAsyncScene(editScene));
     }
 
     private IEnumerator LoadYourAsyncScene(String sceneName)

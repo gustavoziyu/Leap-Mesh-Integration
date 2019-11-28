@@ -8,6 +8,7 @@ TagManager:
   - ModelObject
   - dedo
   - Error
+  - GoalModel
   layers:
   - Default
   - TransparentFX

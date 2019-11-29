@@ -19,27 +19,28 @@ public class ChooseLearnModelSpeech : MonoBehaviour
     void Start()
     {
         keywordsModo = new string[3];
-        keywordsModo[0] = "Um";
-        keywordsModo[1] = "Dois";
-        keywordsModo[2] = "Três";
+        keywordsModo[0] = "Primeiro";
+        keywordsModo[1] = "Segundo";
+        keywordsModo[2] = "Terceiro";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
         keywordRecognizer.Start();
+        GameObject.Find("Initial").SetActive(false);
     }
 
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
     {
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
-            if (args.text == "Um")
+            if (args.text == "Primeiro")
             {
                 SaveObject(first);
             }
-            else if (args.text == "Dois")
+            else if (args.text == "Segundo")
             {
                 SaveObject(second);
             }
-            else if (args.text == "Três")
+            else if (args.text == "Terceiro")
             {
                 SaveObject(third);
             }
@@ -54,7 +55,7 @@ public class ChooseLearnModelSpeech : MonoBehaviour
         toSaveObject.transform.DetachChildren();
         DontDestroyOnLoad(toSaveObject);
 
-        GameObject initialInstance = Instantiate(initial);
+        GameObject initialInstance = Instantiate(initial, new Vector3(1, 1, 1), Quaternion.identity);
         DontDestroyOnLoad(initialInstance);
 
         StartCoroutine(LoadYourAsyncScene(editScene));

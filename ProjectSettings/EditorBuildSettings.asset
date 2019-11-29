@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/First Integration Extrusion+CreatePlane.unity
     guid: 9e01d98372bedee418c78c63482bd8bc
   - enabled: 1
+    path: Assets/Scenes/Beta/CompareMeshes - Beta.unity
+    guid: b02a93b99326fb648b44ab8137fefd70
+  - enabled: 1
+    path: "Assets/Scenes/Beta/Revolu\xE7\xE3o - Beta.unity"
+    guid: 06c2aeced03671248a7374ded86e0b27
+  - enabled: 1
     path: Assets/Scenes/Escolher objeto inicial.unity
     guid: 0d68294eb5db18d408660063903d2b9c
   - enabled: 1
@@ -59,8 +65,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/bd32186025172df4a8130b549fbdfff7
     guid: bd32186025172df4a8130b549fbdfff7
-  - enabled: 1
-    path: "Assets/Scenes/Beta/Revolu\xE7\xE3o - Beta.unity"
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/cf57537207ab98b459d66361393d1ca4
     guid: cf57537207ab98b459d66361393d1ca4
   - enabled: 1
     path: Assets/Scenes/Beta/ChangeMaterial - Beta.unity

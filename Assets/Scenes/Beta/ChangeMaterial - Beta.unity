@@ -2578,6 +2578,7 @@ GameObject:
   - component: {fileID: 2068499465}
   - component: {fileID: 2068499466}
   - component: {fileID: 2068499467}
+  - component: {fileID: 2068499468}
   m_Layer: 0
   m_Name: Leap Motion Controller
   m_TagString: Untagged
@@ -2700,6 +2701,20 @@ MonoBehaviour:
   translationIntensity: 0.05
   translateDistance: 0.6
   rotatingHand: 1
+--- !u!114 &2068499468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068499461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f13ae9bd0fa43d41b905bc673b61355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keywordsModo: []
+  editScene: FullSculpt - Beta
 --- !u!1 &2071410992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1952537982753466, guid: e5874351f2a4f164d9a22fd358f9ccc8,

@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CalculateGradeSpeech.cs" />
     <Compile Include="Assets\ChooseLearnModelSpeech.cs" />
     <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
     <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
@@ -634,6 +635,8 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\PresetChangeMaterial.cs" />
     <Compile Include="Assets\presetObjects.cs" />
+    <Compile Include="Assets\ReturnToEditSceneSpeech.cs" />
+    <Compile Include="Assets\RotateModelDisplay.cs" />
     <Compile Include="Assets\RotateModelMaterial.cs" />
     <Compile Include="Assets\rotateObject.cs" />
     <Compile Include="Assets\Scripts\ChooseObjectButton.cs" />

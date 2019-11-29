@@ -4,20 +4,18 @@ using System.Collections;
 using UnityEngine.Windows.Speech;
 using UnityEngine.SceneManagement;
 
-public class SculptSpeech : MonoBehaviour
+public class ReturnToEditSceneSpeech : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer;
 
     [SerializeField]
     public string[] keywordsModo;
-    public string materialScene = "ChangeMaterial";
-    public string compareScene = "CompareMeshes";
+    public string editScene = "FullSculpt";
 
     void Start()
     {
-        keywordsModo = new string[2];
-        keywordsModo[0] = "Mudar material";
-        keywordsModo[1] = "Avaliar";
+        keywordsModo = new string[1];
+        keywordsModo[0] = "Voltar";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -27,28 +25,13 @@ public class SculptSpeech : MonoBehaviour
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)
     {
         if (args.confidence == ConfidenceLevel.Medium || args.confidence == ConfidenceLevel.High)
-            if (args.text == "Mudar material")
+            if (args.text == "Voltar")
             {
                 GameObject target = GameObject.FindWithTag("ModelObject");
+                Destroy(target.GetComponent<MaterialChange>());
+                target.transform.parent = null;
                 DontDestroyOnLoad(target);
-                StartCoroutine(LoadYourAsyncScene(materialScene));
-            }
-            else if (args.text == "Avaliar")
-            {
-                GameObject goal = GameObject.FindWithTag("GoalModel");
-                if (goal == null)
-                {
-                    Debug.Log("Can't find the goal model object. Did you enter the learn mode?");
-                }
-                else
-                {
-                    GameObject target = GameObject.FindWithTag("ModelObject");
-
-                    DontDestroyOnLoad(target);
-                    Destroy(goal.GetComponent<RotateModelDisplay>());
-                    DontDestroyOnLoad(goal);
-                    StartCoroutine(LoadYourAsyncScene(compareScene));
-                }
+                StartCoroutine(LoadYourAsyncScene(editScene));
             }
     }
 

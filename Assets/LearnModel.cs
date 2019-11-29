@@ -7,6 +7,8 @@ public class LearnModel : MonoBehaviour
 {
     public string editScene = "FullSculpt";
     public GameObject initial;
+    private bool entered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +22,16 @@ public class LearnModel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        entered = true;
+        Debug.Log("to entrando no trigger!");
         this.gameObject.transform.parent = null;
 
         Destroy(this);
         Destroy(this.gameObject.GetComponent<BoxCollider>());
-
         DontDestroyOnLoad(this.gameObject);
 
-        GameObject initialInstance = Instantiate(initial);
-        DontDestroyOnLoad(initialInstance);
+        initial.SetActive(true);
+        DontDestroyOnLoad(initial);
 
         StartCoroutine(LoadYourAsyncScene());
     }

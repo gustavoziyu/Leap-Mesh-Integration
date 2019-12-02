@@ -12,12 +12,14 @@ public class SculptSpeech : MonoBehaviour
     public string[] keywordsModo;
     public string materialScene = "ChangeMaterial";
     public string compareScene = "CompareMeshes";
+    public string exportScene = "Exportar objeto";
 
     void Start()
     {
-        keywordsModo = new string[2];
+        keywordsModo = new string[3];
         keywordsModo[0] = "Mudar material";
         keywordsModo[1] = "Avaliar";
+        keywordsModo[2] = "Exportar";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -49,6 +51,12 @@ public class SculptSpeech : MonoBehaviour
                     DontDestroyOnLoad(goal);
                     StartCoroutine(LoadYourAsyncScene(compareScene));
                 }
+            }
+            else if (args.text == "Exportar")
+            {
+                GameObject target = GameObject.FindWithTag("ModelObject");
+                DontDestroyOnLoad(target);
+                StartCoroutine(LoadYourAsyncScene(exportScene));
             }
     }
 

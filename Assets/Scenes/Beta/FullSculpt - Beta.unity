@@ -428,6 +428,7 @@ MonoBehaviour:
   keywordsModo: []
   materialScene: ChangeMaterial - Beta
   compareScene: CompareMeshes - Beta
+  exportScene: Exportar objeto - Beta
 --- !u!1 &313377033
 GameObject:
   m_ObjectHideFlags: 0

@@ -634,6 +634,7 @@
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceMod.cs" />
     <Compile Include="Assets\Oculus\VoiceMod\Scripts\OVRVoiceModContext.cs" />
     <Compile Include="Assets\PresetChangeMaterial.cs" />
+    <Compile Include="Assets\PresetFullSculpt.cs" />
     <Compile Include="Assets\presetObjects.cs" />
     <Compile Include="Assets\ReturnToEditSceneSpeech.cs" />
     <Compile Include="Assets\RotateModelDisplay.cs" />

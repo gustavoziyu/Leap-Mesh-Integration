@@ -59,6 +59,7 @@
      <Compile Include="Assets\ChooseLearnModelSpeech.cs" />
      <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
      <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />
+     <Compile Include="Assets\CreateMeshByPolygonLeapTouch.cs" />
      <Compile Include="Assets\CreateMeshByRotation.cs" />
      <Compile Include="Assets\displayExistingObject.cs" />
      <Compile Include="Assets\DrawCurve.cs" />
@@ -642,6 +643,7 @@
      <Compile Include="Assets\Scripts\CountTrigger.cs" />
      <Compile Include="Assets\Scripts\CreateMeshByPolygon.cs" />
      <Compile Include="Assets\Scripts\CreatePlaneFromPoints.cs" />
+     <Compile Include="Assets\Scripts\CreatePlaneFromPointsTouch.cs" />
      <Compile Include="Assets\Scripts\CrumpleMesh.cs" />
      <Compile Include="Assets\Scripts\displayImportObject.cs" />
      <Compile Include="Assets\Scripts\displayObjectModel.cs" />

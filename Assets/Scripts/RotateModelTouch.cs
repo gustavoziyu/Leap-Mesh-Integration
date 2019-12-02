@@ -42,12 +42,12 @@ namespace Leap.Unity
         public GameObject target = null;
 
         [Tooltip("Intensity of rotation.")]
-        [Range(0.0f, 10.0f)]
-        public float rotationIntensity = 1;
+        [Range(0.0f, 100.0f)]
+        public float rotationIntensity = 100;
 
         [Tooltip("Intensity of translation.")]
-        [Range(0.0f, 10.0f)]
-        public float translationIntensity = 2f;
+        [Range(0.0f, 1000.0f)]
+        public float translationIntensity = 1000f;
 
         [Tooltip("The hand that makes the rotation.")]
         public WhichHand rotatingHand = WhichHand.Right;
@@ -83,12 +83,12 @@ namespace Leap.Unity
             HandModelBase usedHandModel = HandModelRight;
             while (true)
             {
-                if (usedHandModel != null)
+                if (usedHandModel != null && target != null)
                 {
                     usedHand = usedHandModel.GetLeapHand();
                     if (usedHand != null)
                     {
-
+                        
                         palmObjectDistance = Vector3.Distance(target.transform.position, usedHand.PalmPosition.ToVector3());
                         if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) <= sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > sensitivity)
                         {

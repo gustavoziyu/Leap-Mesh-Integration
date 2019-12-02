@@ -15,6 +15,11 @@ public class PresetChangeMaterial : MonoBehaviour
         {
             GetComponent<Leap.Unity.SwipeDetector>().target = target;
             GetComponent<Leap.Unity.RotateModelMaterial>().target = target;
+            GameObject.Find("Red").GetComponent<ColorControl>().target = target;
+            GameObject.Find("Green").GetComponent<ColorControl>().target = target;
+            GameObject.Find("Blue").GetComponent<ColorControl>().target = target;
+            GameObject.Find("Met").GetComponent<PropControl>().target = target;
+            GameObject.Find("Smooth").GetComponent<PropControl>().target = target;
             CopyComponent(GameObject.Find("MaterialChangePreset").GetComponent<MaterialChange>(), target);
             target.transform.parent = GameObject.Find("Scene").transform;
             target.transform.localPosition = Vector3.zero;

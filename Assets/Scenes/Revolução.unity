@@ -190,6 +190,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   Period: 0.1
   HandModelLeft: {fileID: 91230217}
+  sensitivity: 0.1
   HandModelRight: {fileID: 866781291}
   target: {fileID: 514046592}
   translationIntensity: 0.05
@@ -218,6 +219,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Period: 0.1
+  sensitivity: 0.1
   HandModelLeft: {fileID: 91230217}
   HandModelRight: {fileID: 866781291}
   marker: {fileID: 1211580099206812, guid: d149967b76b174045afc2dba3730f9fd, type: 3}

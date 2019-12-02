@@ -32,7 +32,7 @@ namespace Leap.Unity
          */
         [Tooltip("The hand model to watch. Set automatically if detector is on a hand.")]
         public HandModelBase HandModelLeft = null;
-
+        public float sensitivity = .1f;
         [Tooltip("The hand model to watch. Set automatically if detector is on a hand.")]
         public HandModelBase HandModelRight = null;
 
@@ -78,8 +78,8 @@ namespace Leap.Unity
         private IEnumerator checkGesture()
         {
             Hand usedHand, controlHand;
-            HandModelBase usedHandModel = (translationHand == WhichHand.Left) ? HandModelLeft : HandModelRight;
-            HandModelBase controlHandModel = (translationHand == WhichHand.Left) ? HandModelRight : HandModelLeft;
+            HandModelBase usedHandModel = HandModelLeft;
+            HandModelBase controlHandModel = HandModelRight;
 
             while (true)
             {
@@ -91,7 +91,7 @@ namespace Leap.Unity
                     {
                         palmObjectDistance = Vector3.Distance(target.transform.position, controlHand.PalmPosition.ToVector3());
                         
-                        if (controlHandModel.IsTracked && usedHandModel.IsTracked && usedHand.GrabAngle >= 3
+                        if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > sensitivity
                             && (palmObjectDistance < translateDistance || translating))
                         {
 
@@ -100,7 +100,7 @@ namespace Leap.Unity
                             {
                                 if (palmObjectDistance > translateDistance + 0.1f) translating = false;
                             }
- 
+
                             target.transform.position = new Vector3(target.transform.position.x + translationIntensity * controlHand.PalmVelocity.x,
                                                                     target.transform.position.y + translationIntensity * controlHand.PalmVelocity.y,
                                                                     0);

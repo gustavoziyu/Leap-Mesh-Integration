@@ -21,7 +21,7 @@ namespace Leap.Unity
         [Tooltip("The interval in seconds at which to check this detector's conditions.")]
         [MinValue(0)]
         public float Period = .1f; //seconds
-
+        public float sensitivity = .1f;
         /**
          * The HandModelBase instance to observe. The
          * Set automatically if not explicitly set in the editor.
@@ -159,15 +159,11 @@ namespace Leap.Unity
                             }
                         }
 
-                        if (controlHand != null && vCount > 1)
+                        if (vCount > 1)
                         {
-                            if (controlHandModel.IsTracked)
+                            if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > sensitivity)
                             {
-                                controldist = Vector3.Distance(controlHand.Fingers[1].TipPosition.ToVector3(), controlHand.Fingers[0].TipPosition.ToVector3());
-                                if (controldist < 0.025f)
-                                {
-                                    isDrawing = false; // Encerra processo de criãção
-                                }
+                                isDrawing = false; // Encerra processo de criãção
                             }
                         }
                     }

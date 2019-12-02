@@ -24,9 +24,9 @@ public class SculptSpeech : MonoBehaviour
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
         keywordRecognizer.Start();
-        GameObject target = GameObject.FindWithTag("ModelObject");
-        DontDestroyOnLoad(target);
-        StartCoroutine(LoadYourAsyncScene(materialScene));
+        //GameObject target = GameObject.FindWithTag("ModelObject");
+        //DontDestroyOnLoad(target);
+        //StartCoroutine(LoadYourAsyncScene(materialScene));
     }
 
     void OnKeywordsRecognized(PhraseRecognizedEventArgs args)

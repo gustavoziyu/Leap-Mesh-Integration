@@ -43,6 +43,8 @@ namespace Leap.Unity
         public float pullStrength = 5.0f;
         private MeshFilter unappliedMesh;
         public FallOff fallOff = FallOff.Gauss;
+        public Material indicatorMaterial;
+        public Color indicatorColor;
 
         private bool saveMesh;
         private MeshFilter uMesh;
@@ -86,6 +88,8 @@ namespace Leap.Unity
         {
             indicator = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             indicator.transform.localScale = new Vector3(sizeIndicator, sizeIndicator, sizeIndicator);
+            indicator.GetComponent<MeshRenderer>().material = indicatorMaterial;
+            indicator.GetComponent<Renderer>().material.SetColor("_Color", indicatorColor);
             watcherCoroutine = showRaycast();
         }
 
@@ -124,7 +128,8 @@ namespace Leap.Unity
                             if (Physics.Raycast(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3(), out hit, Mathf.Infinity))
                             {
                                 Debug.DrawRay(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3() * hit.distance, Color.yellow);
-                                indicator.SetActive(true);
+                                if(OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick) == new Vector2(0f, 0f))
+                                    indicator.SetActive(true);
                                 Vector3 startEnd = hit.point - hand.Fingers[selectedFinger].TipPosition.ToVector3();
                                 indicator.transform.position = hit.point - startEnd * indicatorDistance;
                                 MeshFilter filter = hit.collider.GetComponent<MeshFilter>();

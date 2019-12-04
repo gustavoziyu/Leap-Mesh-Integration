@@ -165,6 +165,8 @@ MonoBehaviour:
   radius: 1
   pullStrength: 5
   fallOff: 0
+  indicatorMaterial: {fileID: 2100000, guid: df003447eb80d9641b6c5c4b8f25a01c, type: 2}
+  indicatorColor: {r: 0, g: 1, b: 0.15949917, a: 0.89411765}
   Period: 0.1
   HandModel: {fileID: 164149223}
   FingerName: 1

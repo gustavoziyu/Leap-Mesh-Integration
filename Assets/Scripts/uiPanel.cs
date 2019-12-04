@@ -9,7 +9,7 @@ public class uiPanel : MonoBehaviour {
 	public Transform thumb;
     public Image ColorBar;
     public GameObject target;
-
+    public float thumbSensitivity = 0.01f; 
 
     [Header("Config")]
 	public Transform Picker;
@@ -21,8 +21,15 @@ public class uiPanel : MonoBehaviour {
     public bool fixX;
     public bool fixY;
 
+    private Vector2 leftThumbstick;
+
     private void Update ()
     {
+        leftThumbstick = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+
+        Debug.Log(Picker.position);
+        Picker.position += new Vector3(thumbSensitivity * leftThumbstick.x, thumbSensitivity * leftThumbstick.y, 0);
+
         if (Input.GetKey("up"))
             Picker.position += new Vector3(0, 0.01f, 0);
 		
@@ -41,7 +48,15 @@ public class uiPanel : MonoBehaviour {
     private void SetThumbPosition(Vector3 point)
 	{
 		Vector3 temp = thumb.localPosition;
-		thumb.position = point;
+        if (point.x < -1f)
+            point.x = -1f;
+        else if (point.x > -0.4f)
+            point.x = -0.4f;
+        if (point.y < -0.3f)
+            point.y = -0.3f;
+        else if (point.y > 0.3f)
+            point.y = 0.3f;
+        thumb.position = point;
 		thumb.localPosition = new Vector3(fixX ? temp.x : thumb.localPosition.x, fixY ? temp.y : thumb.localPosition.y, thumb.localPosition.z+offZ);
 		getImageColor(thumb.localPosition);
 

@@ -73,7 +73,7 @@ public class SculptSpeech : MonoBehaviour
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
         // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
+
         {
             yield return null;
         }

@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CalculateGradeSpeech.cs" />
+     <Compile Include="Assets\changeMaterialSpeech.cs" />
      <Compile Include="Assets\ChooseLearnModelSpeech.cs" />
      <Compile Include="Assets\ChooseObjectExportSpeech.cs" />
      <Compile Include="Assets\CreateMeshByPolygonLeap.cs" />

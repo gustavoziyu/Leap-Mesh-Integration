@@ -128,8 +128,10 @@ namespace Leap.Unity
                             if (Physics.Raycast(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3(), out hit, Mathf.Infinity))
                             {
                                 Debug.DrawRay(hand.Fingers[selectedFinger].TipPosition.ToVector3(), hand.Fingers[selectedFinger].Direction.ToVector3() * hit.distance, Color.yellow);
-                                if(OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick) == new Vector2(0f, 0f))
+                                if(OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick) == new Vector2(0f, 0f) && hit.transform.gameObject.tag == "ModelObject")
                                     indicator.SetActive(true);
+                                else
+                                    indicator.SetActive(false);
                                 Vector3 startEnd = hit.point - hand.Fingers[selectedFinger].TipPosition.ToVector3();
                                 indicator.transform.position = hit.point - startEnd * indicatorDistance;
                                 MeshFilter filter = hit.collider.GetComponent<MeshFilter>();
@@ -159,6 +161,7 @@ namespace Leap.Unity
                                     leftThumbstickPosition = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
                                     Debug.Log(leftThumbstickPosition);
                                     DeformMesh(filter.mesh, relativePoint, leftThumbstickPosition.y * pullStrength * Time.deltaTime, radius);
+
                                 }
                             }
                             else

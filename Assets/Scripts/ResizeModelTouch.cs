@@ -104,9 +104,9 @@ namespace Leap.Unity
                                     currentDistance.x = Mathf.Abs(positionLeft.x - positionRight.x);
                                     currentDistance.y = Mathf.Abs(positionLeft.y - positionRight.y);
                                     currentDistance.z = Mathf.Abs(positionLeft.z - positionRight.z);
-                                    target.transform.localScale += new Vector3(target.transform.lossyScale.x * intensity * (currentDistance.x - baseDistance.x),
+                                    target.transform.localScale += new Vector3(target.transform.lossyScale.x *-1 * intensity * (currentDistance.x - baseDistance.x),
                                                                                target.transform.lossyScale.y * intensity * (currentDistance.y - baseDistance.y),
-                                                                               target.transform.lossyScale.z * intensity * (currentDistance.z - baseDistance.z));
+                                                                               target.transform.lossyScale.z *-1* intensity * (currentDistance.z - baseDistance.z));
 
                                     baseDistance = currentDistance;
                                 }

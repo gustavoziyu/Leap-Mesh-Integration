@@ -166,8 +166,8 @@ MonoBehaviour:
   pullStrength: 5
   fallOff: 0
   indicatorMaterial: {fileID: 0}
-  indicatorColor: {r: 0, g: 0, b: 0, a: 0}
-  Period: 0.1
+  indicatorColor: {r: 0.017205596, g: 1, b: 0, a: 0}
+  Period: 0.05
   HandModel: {fileID: 164149223}
   FingerName: 1
 --- !u!114 &164149223 stripped
@@ -2209,7 +2209,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4.59179e-40}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

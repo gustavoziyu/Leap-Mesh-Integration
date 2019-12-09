@@ -42,8 +42,8 @@ namespace Leap.Unity
         public GameObject target = null;
 
         [Tooltip("Intensity of rotation.")]
-        [Range(0.0f, 100.0f)]
-        public float rotationIntensity = 100;
+        [Range(0.0f, 1000.0f)]
+        public float rotationIntensity = 500;
 
         [Tooltip("Intensity of translation.")]
         [Range(0.0f, 1000.0f)]
@@ -79,7 +79,16 @@ namespace Leap.Unity
 
         private IEnumerator checkGesture()
         {
+            Vector3 startPosition = new Vector3(0, 0, 0);
+            Vector3 startRotation = new Vector3(0, 0, 0);
+            Vector3 currPosition;
+            bool start = false;
+            bool first = true;
             Hand usedHand;
+            float rotateX = 0;
+            float newRotateX = 0;
+            float rotateY = 0;
+            float newRotateY = 0;
             HandModelBase usedHandModel = HandModelRight;
             while (true)
             {
@@ -88,15 +97,32 @@ namespace Leap.Unity
                     usedHand = usedHandModel.GetLeapHand();
                     if (usedHand != null)
                     {
-                        
                         palmObjectDistance = Vector3.Distance(target.transform.position, usedHand.PalmPosition.ToVector3());
                         if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) <= sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) > sensitivity)
                         {
-                            Debug.Log("rotate function call");
-                            target.transform.rotation = Quaternion.Euler(target.transform.rotation.eulerAngles.x,
-                                                                         target.transform.rotation.eulerAngles.y + rotationIntensity * (-1) * usedHand.PalmVelocity.x,
-                                                                         target.transform.rotation.eulerAngles.z);
-                            target.transform.RotateAround(target.transform.position, Vector3.right, rotationIntensity * usedHand.PalmVelocity.y);
+                            if (!start) {
+                                start = true;
+                                startPosition = usedHand.PalmPosition.ToVector3();
+                                startRotation = target.transform.rotation.eulerAngles;
+                            }
+                            currPosition = usedHand.PalmPosition.ToVector3();
+
+                            if (first)
+                            {
+                                rotateX = 0;
+                                rotateY = 0;
+                                first = false;
+                            }
+                            newRotateX = (currPosition.y - startPosition.y) * rotationIntensity;
+                            newRotateY = (currPosition.x - startPosition.x) * rotationIntensity;
+                            target.transform.Rotate(0, newRotateY - rotateY, newRotateX - rotateX, UnityEngine.Space.World);
+                            rotateX = newRotateX;
+                            rotateY = newRotateY;
+
+                        }
+                        else {
+                            start = false;
+                            first = true;
                         }
                         if (usedHandModel.IsTracked && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > sensitivity && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) <= sensitivity)
                         {

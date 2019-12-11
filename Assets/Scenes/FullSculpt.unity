@@ -482,7 +482,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Period: 0.1
+  Period: 0.05
   sensitivity: 0.1
   HandModelLeft: {fileID: 1479318853}
   HandModelRight: {fileID: 53571037}
@@ -512,7 +512,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Period: 0.1
+  Period: 0.05
   sensitivity: 0.1
   HandModelLeft: {fileID: 1479318853}
   HandModelRight: {fileID: 53571037}

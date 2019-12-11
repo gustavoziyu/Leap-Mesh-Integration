@@ -643,6 +643,7 @@
      <Compile Include="Assets\Scripts\CompareMeshes.cs" />
      <Compile Include="Assets\Scripts\CountTrigger.cs" />
      <Compile Include="Assets\Scripts\CreateMeshByPolygon.cs" />
+     <Compile Include="Assets\Scripts\CreateMeshByPolygonTouch.cs" />
      <Compile Include="Assets\Scripts\CreatePlaneFromPoints.cs" />
      <Compile Include="Assets\Scripts\CreatePlaneFromPointsTouch.cs" />
      <Compile Include="Assets\Scripts\CrumpleMesh.cs" />

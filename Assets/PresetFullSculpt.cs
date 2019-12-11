@@ -17,7 +17,7 @@ namespace Leap.Unity
                 GetComponent<ResizeModelTouch>().target = target;
                 target.GetComponent<MeshCollider>().isTrigger = false;
                 target.GetComponent<MeshCollider>().convex = false;
-                target.transform.position = new Vector3(-3, 0, 0);
+                target.transform.position = new Vector3(8, 0, 0);
                 target.transform.rotation = new Quaternion(0, 0, 0, 0);
                 if (target.name == "Revolution" || target.name == "Extrusion") ;
                 //target.transform.localScale = new Vector3(10, 10, 10);

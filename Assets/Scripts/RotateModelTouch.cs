@@ -77,6 +77,14 @@ namespace Leap.Unity
             Deactivate();
         }
 
+        // Update is called once per frame
+        void Update()
+        {
+            if (OVRInput.Get(OVRInput.Button.Two)){
+                target.transform.position = new Vector3(8, 0, 0);
+            }
+        }
+
         private IEnumerator checkGesture()
         {
             Vector3 startPosition = new Vector3(0, 0, 0);

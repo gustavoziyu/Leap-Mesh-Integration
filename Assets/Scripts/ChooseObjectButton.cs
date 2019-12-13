@@ -21,10 +21,16 @@ public class ChooseObjectButton : MonoBehaviour
     protected bool released = false;
     protected Vector3 startPosition;
 
-    void Start()
+    IEnumerator Start()
     {
         // Remember start position of button
         startPosition = transform.localPosition;
+
+        Collider col = gameObject.GetComponent<BoxCollider>();
+        col.enabled = false;
+        Debug.Log(col);
+        yield return new WaitForSeconds(2);
+        col.enabled = true;
     }
 
     void Update()
@@ -95,8 +101,9 @@ public class ChooseObjectButton : MonoBehaviour
         // This is particularly good for creating loading screens.
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
-        yield return new WaitForSeconds(1);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+                yield return new WaitForSeconds(1);
+
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)

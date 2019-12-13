@@ -26,7 +26,7 @@ public class InputManagerTouch : MonoBehaviour {
     }
 
     void Update () {
-		if (Input.GetKey(Undo) || OVRInput.Get(OVRInput.Button.Three))
+		if (Input.GetKey(Undo) || OVRInput.Get(OVRInput.Button.One))
         {
             FingerDeform.undoDeform();
         }

@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene1.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ChangeMaterial.unity
     guid: 208678ff688dd8144b7b1feadd7e8a47
   - enabled: 1
@@ -32,10 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Integration Extrusion+CreatePlane.unity
     guid: 9e01d98372bedee418c78c63482bd8bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/CompareMeshes - Beta.unity
     guid: b02a93b99326fb648b44ab8137fefd70
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Beta/Revolu\xE7\xE3o - Beta.unity"
     guid: 06c2aeced03671248a7374ded86e0b27
   - enabled: 1
@@ -50,19 +50,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Escolher objeto inicial - Beta.unity
     guid: db4da9143be8be0478e2080f78e6e583
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Exportar objeto - Beta.unity
     guid: c7991f9326902384fab74f10285b9035
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/First Integration Extrusion+CreatePlane - Beta.unity
     guid: 029fb40acfabd8c4b94038a830fd43e1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Importar objeto - Beta.unity
     guid: a2975be2fe27ea54cac3d1e7a61a3687
   - enabled: 0
@@ -71,19 +71,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/ChangeMaterial - Beta.unity
     guid: 0d3729f40f541a94da5de6c96f50d880
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/FullSculpt - Beta.unity
     guid: 29ea20d5aadebc54fbeca1132c03f95f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Tela inicial - Beta.unity
     guid: 66b2f21defcb75640be8015fb0c249d9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Beta/Escolher dificuldade - Beta.unity
     guid: 06ec44dff95312341aec26967c899336
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Beta/Objeto padr\xE3o - Beta.unity"
     guid: c4cf7a8eeba57044393f481f20745ad3
   - enabled: 1

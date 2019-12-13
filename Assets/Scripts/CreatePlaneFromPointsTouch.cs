@@ -205,7 +205,7 @@ namespace Leap.Unity
                 createdPlan.GetComponent<MeshRenderer>().material = diffuseMaterial;
 
                 createdPlan.tag = "Plane";
-                gameObject.GetComponent<CreateMeshByPolygonLeap>().Setup();
+                gameObject.GetComponent<CreateMeshByPolygonLeapTouch>().Setup();
                 gameObject.GetComponent<RotateModelTouch>().target = createdPlan;
                 foreach (GameObject marker in markers)
                 {

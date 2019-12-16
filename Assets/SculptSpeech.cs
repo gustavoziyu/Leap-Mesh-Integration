@@ -16,10 +16,11 @@ public class SculptSpeech : MonoBehaviour
 
     void Start()
     {
-        keywordsModo = new string[3];
+        keywordsModo = new string[4];
         keywordsModo[0] = "Mudar material";
         keywordsModo[1] = "Avaliar";
         keywordsModo[2] = "Exportar";
+        keywordsModo[3] = "Resetar";
 
         keywordRecognizer = new KeywordRecognizer(keywordsModo);
         keywordRecognizer.OnPhraseRecognized += OnKeywordsRecognized;
@@ -60,6 +61,12 @@ public class SculptSpeech : MonoBehaviour
                 GameObject target = GameObject.FindWithTag("ModelObject");
                 DontDestroyOnLoad(target);
                 StartCoroutine(LoadYourAsyncScene(exportScene));
+            }
+            else if (args.text == "Resetar")
+            {
+                GameObject target = GameObject.FindWithTag("ModelObject");
+                target.transform.position = new Vector3(0, 0, 0);
+                target.transform.rotation = new Quaternion(0, 0, 0, 0);
             }
     }
 

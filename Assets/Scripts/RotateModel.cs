@@ -103,15 +103,8 @@ namespace Leap.Unity
                                                                          target.transform.rotation.eulerAngles.z);
                             target.transform.RotateAround(target.transform.position, Vector3.right, rotationIntensity * usedHand.PalmVelocity.y);
                         }
-                        if (controlHandModel.IsTracked && usedHandModel.IsTracked && usedHand.GrabAngle >= 3 
-                            && (palmObjectDistance < translateDistance || translating))
+                        if (controlHandModel.IsTracked && usedHandModel.IsTracked && usedHand.GrabAngle >= 3)
                         {
-
-                            if (!translating) translating = true;
-                            else
-                            {
-                                if (palmObjectDistance > translateDistance + 0.1f) translating = false;
-                            }
                             Debug.Log(Vector3.Distance(target.transform.position, controlHand.PalmPosition.ToVector3()));
                             target.transform.position = new Vector3(target.transform.position.x + translationIntensity * controlHand.PalmVelocity.x,
                                                                     target.transform.position.y + translationIntensity * controlHand.PalmVelocity.y,

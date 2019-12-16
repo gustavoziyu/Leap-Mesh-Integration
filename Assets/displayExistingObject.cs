@@ -43,7 +43,7 @@ public class displayExistingObject : MonoBehaviour
 
             newObject.AddComponent<BoxCollider>();
             newObject.GetComponent<BoxCollider>().isTrigger = true;
-            newObject.tag = "ModelObject";
+            //newObject.tag = "ModelObject";
             setChooseObjectExportSpeech();
 
             loadedObject.transform.position = this.transform.position;

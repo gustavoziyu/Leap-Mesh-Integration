@@ -2049,6 +2049,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.108453274
       objectReference: {fileID: 0}
+    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 54010693120870228, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -2070,11 +2075,6 @@ PrefabInstance:
       value: 0.291
       objectReference: {fileID: 0}
     - target: {fileID: 54595437679376708, guid: e5874351f2a4f164d9a22fd358f9ccc8,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
       value: 3
@@ -2341,7 +2341,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3293,6 +3293,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.091546714
       objectReference: {fileID: 0}
+    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 54010693120870228, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -3324,11 +3329,6 @@ PrefabInstance:
       value: 0.29100004
       objectReference: {fileID: 0}
     - target: {fileID: 54595437679376708, guid: e5874351f2a4f164d9a22fd358f9ccc8,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 54610131252787608, guid: e5874351f2a4f164d9a22fd358f9ccc8,
         type: 3}
       propertyPath: m_CollisionDetection
       value: 3

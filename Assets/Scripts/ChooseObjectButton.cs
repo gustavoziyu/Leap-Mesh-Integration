@@ -21,10 +21,15 @@ public class ChooseObjectButton : MonoBehaviour
     protected bool released = false;
     protected Vector3 startPosition;
 
-    void Start()
+    IEnumerator Start()
     {
         // Remember start position of button
         startPosition = transform.localPosition;
+
+        Collider col = gameObject.GetComponent<BoxCollider>();
+        col.enabled = false;
+        yield return new WaitForSeconds(2);
+        col.enabled = true;
     }
 
     void Update()

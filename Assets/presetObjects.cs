@@ -34,11 +34,6 @@ namespace Leap.Unity
                 goal.transform.rotation = new Quaternion(0, 0, 0, 0);
                 goal.AddComponent<RotateModelDisplay>();
             }
-            else
-            {
-                GameObject.Find("Spot Light").SetActive(false);
-                GameObject.Find("Spot Light 2").SetActive(false);
-            }
                 
            
             }

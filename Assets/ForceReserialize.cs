@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿/**using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu()]
@@ -18,3 +18,4 @@ public class PrefabReferenceFixer : ScriptableObject
         AssetDatabase.ForceReserializeAssets(objectPaths);
     }
 }
+**/

@@ -23,9 +23,9 @@ public class ExportObject : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject modelObj = GameObject.FindWithTag("ModelObject");
+        modelObj.transform.localScale = modelObj.GetComponent<displayObjectModel>().previousSize;
         ObjExporter objExp = modelObj.GetComponent<ObjExporter>();
         objExp.exportName = workingPath;
-        modelObj.transform.localScale = modelObj.GetComponent<displayObjectModel>().previousSize;
         objExp.exportCall();
 
         modelObj.transform.parent = null;
